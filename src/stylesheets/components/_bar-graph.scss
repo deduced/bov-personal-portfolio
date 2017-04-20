@@ -1,0 +1,96 @@
+
+.c-bar-graph {
+
+  max-width: 332px;
+
+  &__container {
+  @extend .l-flexy-row;
+  border-bottom: 1px solid rgb(151, 151, 151);
+  height: 320px;
+  width: 100%;
+  flex-wrap: nowrap;
+  }
+
+  &__title--frontend {
+    margin-top: 49px;
+    color: rgb(132, 206, 237);
+  }
+
+  &__title--backend {
+    color: rgb(235, 248, 254);
+  }
+
+  &__title--other {
+    color: rgb(168, 181, 223);
+  }
+
+  &__container--ylabels {
+    @extend .l-flexy-col-xs;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 120px;
+    padding: 20px 10px;
+  }
+
+  &__container--bars {
+    @extend .l-flexy-row;
+    position: relative;
+    width: 70%;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+
+  &__ylabel {
+    font-size: 14px;
+  }
+
+
+  &__xlabel {
+    position: absolute;
+    display: inline-block;
+    transform: rotate(55deg);
+    font-size: 13px;
+
+    &--skill-1 {
+      top: 350px;
+    }
+
+    &--skill-2 {
+      top: 348px;
+    }
+
+    &--skill-3 {
+      top: 340px;
+    }
+
+    &--skill-4 {
+      top: 342px;
+    }
+  }
+
+  &__bar {
+    width: 25px;
+    border-radius: 2px 2px 0 0;
+
+
+    &--skill-1 {
+      height: 75%;
+      background-color: rgb(58, 154, 196);
+    }
+
+    &--skill-2 {
+      height: 65%;
+      background-color: rgb(235, 248, 254);
+    }
+
+    &--skill-3 {
+      height: 35%;
+      background-color: rgb(179, 227, 248);
+    }
+
+    &--skill-4 {
+      height: 10%;
+      background-color: rgb(216, 216, 216);
+    }
+  }
+}

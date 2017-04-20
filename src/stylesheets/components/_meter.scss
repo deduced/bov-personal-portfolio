@@ -1,12 +1,15 @@
 .c-meter {
+  @extend .l-flexy-row;
   border: 1px solid #512828;
-  
+
   &__frontend-bar {
+    @extend .l-flexy-row;
     background: #84CEED;
-    flex-grow: 2;
+    flex-grow: 3;
   }
 
   &__backend-bar {
+    @extend .l-flexy-row;
     background: #EBF8FE;
     flex-grow: 1;
     justify-content: flex-end;
