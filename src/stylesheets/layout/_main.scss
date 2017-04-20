@@ -23,6 +23,10 @@
 
 .l-article {
 
+  &__wrapper--skills {
+    margin-top: 49px;
+  }
+
   &--showcase {
     @extend .l-flexy-col-xs;
     border-bottom: 3px solid #FDF6E3;
