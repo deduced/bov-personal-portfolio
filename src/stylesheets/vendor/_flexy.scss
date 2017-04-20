@@ -1,0 +1,136 @@
+//
+// Flexy
+// Simple Flexbox grid built with SCSS.
+// For the standard CSS version, see `flexy.css`
+// Copyright 2017, Carlos Astrada
+// Free to use under the MIT license.
+// http://www.opensource.org/licenses/mit-license.php
+//
+
+
+// ------- VARIABLES -------//
+
+$flexy-cols: 12 !default;
+$flexy-gutter: 0.5rem !default;
+
+
+// Breakpoints //
+$flexy-breakpoints: (
+  (xs),
+  (sm, 768px),
+  (md, 992px),
+  (lg, 1200px)
+) !default;
+
+
+// ******** FUNCTIONS ******* //
+
+// Calculate column size %
+@function get-col-percent($column-num) {
+  @return $column-num / $flexy-cols * 100%;
+}
+
+
+// ********* MIXINS ********** //
+
+// Create uniform margin / padding
+@mixin spacing($value, $type: margin, $orientation: vertical) {
+  @if $orientation == vertical {
+    #{ $type }-bottom: $value;
+    #{ $type }-top: $value;
+  } @else {
+    #{ $type }-left: $value;
+    #{ $type }-right: $value;
+  }
+}
+
+// Create row wrapper which acts as the flexbox parent
+.l-flexy-row {
+  // @include spacing((-$flexy-gutter), margin, horizontal);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// ********** PLACEHOLDERS ********* //
+%l-flexy-col {
+  @include spacing(($flexy-gutter), padding, horizontal);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+}
+
+%l-flexy-col-flex {
+  @extend %l-flexy-col;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+// Generate a set of grid column classes for each namespace
+// .flexy-col-[namespace] for intelligent column division
+// .flexy-col-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)
+// .flexy-offset-[namespace]-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)
+// .flexy-offset-[namespace]-reset for resetting a col's offset for that and larger namespaces
+//
+
+@mixin grid-base($namespace) {
+  .l-flexy-col-#{$namespace} {
+    @extend %l-flexy-col-flex;
+  }
+
+  @for $i from 1 through $flexy-cols {
+    .l-flexy-col-#{$namespace}-#{$i} {
+      @extend %l-flexy-col;
+    }
+  }
+}
+
+@mixin grid-sizes($namespace) {
+  @for $i from 1 through $flexy-cols {
+    .l-flexy-col-#{$namespace}-#{$i} {
+      flex-basis: get-col-percent($i);
+      max-width: get-col-percent($i);
+    }
+  }
+
+  @for $i from 1 through $flexy-cols {
+    // do not include the offset class for last column
+    @if ($i != $flexy-cols) {
+      .l-flexy-offset-#{$namespace}-#{$i} {
+        margin-left: get-col-percent($i);
+      }
+    }
+  }
+
+  .l-flexy-offset-#{$namespace}-reset {
+    margin-left: 0;
+  }
+}
+
+// Build grid in 2 steps:
+// 1. For each namespace, create grid-base
+// 2. For each namespace, wrap the col width/offset measurements in their breakpoint media query
+
+@each $val in $flexy-breakpoints {
+  $namespace: nth($val, 1);
+  @include grid-base($namespace);
+}
+
+@each $val in $flexy-breakpoints {
+  @if length($val) == 1 {
+    $namespace: nth($val, 1);
+    @include grid-sizes($namespace);
+  } @else {
+    $namespace: nth($val, 1);
+    $size: nth($val, 2);
+
+    @media only screen and (min-width: #{size}) {
+      @include grid-sizes($namespace);
+    }
+  }
+}

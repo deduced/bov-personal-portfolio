@@ -1,0 +1,28 @@
+// ------ CONTAINERS ------ //
+
+.l-container {
+  &__label-group {
+    width: 100%;
+    margin-top: 59px;
+  }
+
+  &__repo-link-group {
+    width: 75%;
+    margin: 40px 0;
+  }
+}
+
+
+
+// -------- Layout Utility Classes --------- //
+.u-centered {
+  align-items: center;
+}
+
+.u-space-around {
+  justify-content: space-around;
+}
+
+.u-space-between {
+  justify-content: space-between;
+}

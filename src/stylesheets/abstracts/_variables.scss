@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Lora");
+$text-font-stack: 'Lora', serif !default;
+
+
+// Text Colors
+$text-color-dark: rgb(64, 64, 59) !default;
+$text-color-faded: rgba(64, 64, 59, 0.5) !default;
+$text-color-light: rgb(255, 255, 255) !default;
+
+
+//Brand Colors
+$brand-color: rgb(255, 205, 68) !default;
+$brand-color-secondary: rgba(255, 205, 68, 0.5) !default;
+$brand-color-disabled: rgba(255, 205, 68, 0.2) !default;
+$highlight-color: rgb(255, 255, 146) !default;
+
+
+
+
+// Locations
+$base-url: '/assets/' !default;

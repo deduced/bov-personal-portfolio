@@ -1,0 +1,30 @@
+.l-section {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &--highlight {
+    @extend .l-flexy-col-xs;
+  }
+
+  &__header {
+    padding-left: 33px;
+    padding-top: 48px;
+
+    &--highlight {
+      padding-left: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__signature {
+    margin-top: 8px;
+  }
+}
+
+.l-article {
+
+  &--showcase {
+    @extend .l-flexy-col-xs;
+    border-bottom: 3px solid #FDF6E3;
+  }
+}

@@ -1,0 +1,27 @@
+.c-meter {
+  border: 1px solid #512828;
+  
+  &__frontend-bar {
+    background: #84CEED;
+    flex-grow: 2;
+  }
+
+  &__backend-bar {
+    background: #EBF8FE;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &__text {
+    font-size: 32px;
+    padding: 10px;
+  }
+
+  &__text--frontend {
+    color: #FFFFFF;
+  }
+
+  &__text--backend {
+    color: #3A9BC4;
+  }
+}

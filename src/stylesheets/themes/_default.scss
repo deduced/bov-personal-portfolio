@@ -1,0 +1,90 @@
+// -----------------------------------------------------------------------------
+// The theme is a custom black-and-white with an accent based on the brand color in _variables
+// -----------------------------------------------------------------------------
+
+// ----- Text Colors ----- //
+$text-color-dark: rgb(64, 64, 59);
+$text-color-faded: rgba(64, 64, 59, 0.5);
+$text-color-light: rgb(255, 255, 255);
+
+// Background Colors to use for main and alternate
+$background-main: rgb(15, 15, 16);
+$background-alt: rgb(255, 255, 255);
+
+// Font Stacks
+$text-font-stack: 'Lora', serif !default;
+$signature-font-stack: 'Euphoria Script', cursive !default;
+
+// ----- WRAPPERS ---------//
+
+// Site Wrapper
+.wrapper {
+  background-color: $background-main;
+}
+
+// ------ SECTIONS -------- //
+.t-section {
+  background-color: $background-main;
+
+  &--alt {
+    background-color: $background-alt;
+  }
+
+  &--highlight {
+    background-color: $brand-color;
+  }
+
+  &__header--alt {
+    color: $text-color-dark;
+  }
+
+  &__header--highlight {
+    color: $text-color-dark;
+    font-size: 16px;
+  }
+
+  &__cta {
+    color: $text-color-dark;
+    font-size: 24px;
+  }
+}
+
+.t-article {
+  &__header--alt {
+    color: $text-color-dark;
+  }
+
+  &__header--showcase {
+    font-size: 1em;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+  }
+
+  &__description--alt {
+    color: $text-color-faded;
+    width: 308px;
+    text-align: center;
+  }
+}
+
+.t-signature {
+  font: 26px $signature-font-stack;
+  color: $text-color-dark;
+}
+
+.t-repo-link {
+  color: $text-color-dark;
+  font-size: 9px;
+  letter-spacing: 0.4px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+// Components
+.t-label--primary {
+  background-color: #242526;
+  color: $text-color-light;
+  font-weight: 800;
+  text-transform: uppercase;
+}
