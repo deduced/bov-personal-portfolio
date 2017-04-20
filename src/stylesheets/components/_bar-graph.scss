@@ -1,7 +1,7 @@
 
 .c-bar-graph {
 
-  max-width: 332px;
+  min-width: 332px;
 
   &__container {
   @extend .l-flexy-row;
@@ -12,7 +12,6 @@
   }
 
   &__title--frontend {
-    margin-top: 49px;
     color: rgb(132, 206, 237);
   }
 
