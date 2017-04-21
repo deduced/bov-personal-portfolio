@@ -32,6 +32,7 @@ $signature-font-stack: 'Euphoria Script', cursive !default;
 
   &--highlight {
     background-color: $brand-color;
+    padding-bottom: 20px;
   }
 
   &__header--alt {
@@ -46,6 +47,15 @@ $signature-font-stack: 'Euphoria Script', cursive !default;
   &__cta {
     color: $text-color-dark;
     font-size: 24px;
+  }
+
+  &__social-media-group {
+    width: 50%;
+    padding: 10px;
+  }
+
+  &--footer {
+    min-width: 100%;
   }
 }
 

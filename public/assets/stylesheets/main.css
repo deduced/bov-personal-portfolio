@@ -819,6 +819,9 @@ body {
 .u-centered {
   align-items: center; }
 
+.u-justify-center {
+  justify-content: center; }
+
 .u-space-around {
   justify-content: space-around; }
 
@@ -936,7 +939,8 @@ body {
   .t-section--alt {
     background-color: white; }
   .t-section--highlight {
-    background-color: #ffcd44; }
+    background-color: #ffcd44;
+    padding-bottom: 20px; }
   .t-section__header--alt {
     color: #40403b; }
   .t-section__header--highlight {
@@ -945,6 +949,11 @@ body {
   .t-section__cta {
     color: #40403b;
     font-size: 24px; }
+  .t-section__social-media-group {
+    width: 50%;
+    padding: 10px; }
+  .t-section--footer {
+    min-width: 100%; }
 
 .t-article__header--alt {
   color: #40403b; }
