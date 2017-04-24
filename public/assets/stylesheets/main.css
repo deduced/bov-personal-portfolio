@@ -914,6 +914,34 @@ body {
       height: 10%;
       background-color: #d8d8d8; }
 
+.c-slider__container {
+  position: relative; }
+.c-slider__item {
+  position: absolute;
+  left: -1000px;
+  opacity: 0;
+  transition: opacity .5s ease-in-out; }
+  .c-slider__item--active {
+    position: static;
+    display: inline-block;
+    opacity: 1; }
+.c-slider__bullet-group {
+  width: 100px;
+  text-align: center;
+  z-index: 99999;
+  width: 100%;
+  margin-bottom: 20px; }
+.c-slider__bullet {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ADB7C1;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .c-slider__bullet--active {
+    background: #0C0C11; }
+
 .c-meter {
   border: 1px solid #512828; }
   .c-meter__frontend-bar {
