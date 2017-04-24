@@ -2,6 +2,11 @@
   padding-left: 20px;
   padding-right: 20px;
 
+  &--hero {
+    @extend .l-flexy-col-xs;
+  
+  }
+
   &--highlight {
     @extend .l-flexy-col-xs;
   }
@@ -19,6 +24,7 @@
   &__signature {
     margin-top: 8px;
   }
+
 }
 
 .l-article {

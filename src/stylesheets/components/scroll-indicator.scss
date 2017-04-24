@@ -1,0 +1,19 @@
+.c-scroll-indicator {
+	position: absolute;
+	left: 50%;
+	font-size: 50px;
+	animation: bounce 1s infinite;
+
+	&__container {
+		position: relative;
+		flex-grow: 1;
+	}
+
+	@at-root {
+		@keyframes bounce {
+			 0% { bottom: 35%; }
+			 50%   { bottom: 40%; }
+			 100% { bottom: 35%; }
+		}
+	}
+}
