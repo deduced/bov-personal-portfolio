@@ -855,7 +855,7 @@ body {
   height: 100vh;
   padding-left: 20px; }
   .c-hero__header {
-    padding-top: 30px;
+    padding-top: 70px;
     margin-bottom: 30px; }
 
 .label {
@@ -960,6 +960,52 @@ body {
     bottom: 40%; }
   100% {
     bottom: 35%; } }
+.c-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s; }
+  .c-overlay__content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */ }
+  .c-overlay__item-inner {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 5vh;
+    color: #ffffff;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */ }
+    .c-overlay__item-inner--social-links {
+      color: inherit;
+      margin-top: 10%;
+      padding: 25px;
+      display: inline-block; }
+  .c-overlay__closebtn {
+    color: #ffffff;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 6vh; }
+  .c-overlay__openbtn {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 2rem; }
+
 .c-meter {
   border: 1px solid #512828; }
   .c-meter__frontend-bar {
