@@ -1,3 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.l-nav-primary {
+
+  // For >= tablet sized screens, set menu to display: none; 
+  &--mobile {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+}
