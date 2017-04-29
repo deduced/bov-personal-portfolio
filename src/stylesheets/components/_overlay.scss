@@ -47,5 +47,9 @@
       top: 20px;
       left: 10px;
       font-size: 2rem;
+
+      @include media(tablet) {
+        display: none;
+      }
     }
 }

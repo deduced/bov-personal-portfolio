@@ -1007,6 +1007,9 @@ body {
     top: 20px;
     left: 10px;
     font-size: 2rem; }
+    @media screen and (min-width: 568px) {
+      .c-overlay__openbtn {
+        display: none; } }
 
 .c-meter {
   border: 1px solid #512828; }

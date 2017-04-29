@@ -22,7 +22,25 @@ $brand-color-disabled: rgba(255, 205, 68, 0.2) !default;
 $highlight-color: rgb(255, 255, 146) !default;
 
 
-
-
 // Locations
 $base-url: '/assets/' !default;
+
+// Breakpoints
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 568px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+) !default;
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
+) !default;
