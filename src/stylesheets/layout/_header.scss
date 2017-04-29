@@ -2,12 +2,37 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-.l-nav-primary {
+.l-nav-primary-mobile {
+  // For >= tablet sized screens, set menu to display: none;
+  @include media(tablet) {
+    display: none;
+  }
+}
 
-  // For >= tablet sized screens, set menu to display: none; 
-  &--mobile {
-    @include media(tablet) {
-      display: none;
+.l-nav-primary-desktop {
+  display: none;
+  width: 100%;
+
+  &__menu-container {
+    @extend .l-flexy-row;
+    list-style: none;
+    align-items: center;
+  }
+
+  &__menu-item {
+    font-size: .75em;
+    margin: 0 1em;
+
+    &--main {
+      flex-grow: 1;
     }
+
+    @include media(desktop) {
+      font-size: 1em;
+    }
+  }
+
+  @include media(tablet) {
+    display: block;
   }
 }

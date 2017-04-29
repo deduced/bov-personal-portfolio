@@ -12,4 +12,12 @@
       display: none;
     }
   }
+
+  &__text {
+    font-size: 1em;
+
+    @include media(desktop) {
+      font-size: 1.5em;
+    }
+  }
 }

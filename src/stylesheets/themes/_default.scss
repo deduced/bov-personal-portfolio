@@ -15,6 +15,13 @@ $background-alt: rgb(255, 255, 255);
 $text-font-stack: 'Lora', serif !default;
 $signature-font-stack: 'Euphoria Script', cursive !default;
 
+
+// ------ BASE STYLES ------//
+body {
+  background-color: $background-main;
+}
+
+
 // ----- WRAPPERS ---------//
 
 // Site Wrapper

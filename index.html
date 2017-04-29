@@ -15,8 +15,8 @@
 
     <header id="header">
       <div class="header__container">
-        <nav id="nav-primary" class="">
-          <div id="mobile-nav" class="c-overlay l-nav-primary--mobile">
+        <nav id="nav-primary">
+          <div id="mobile-nav" class="c-overlay l-nav-primary-mobile">
             <a href="javascript:void(0)" class="c-overlay__closebtn" onclick="closeNav()">&times;</a>
 
             <div class="c-overlay__content">
@@ -31,6 +31,18 @@
               </div>
             </div>
           </div>
+
+          <div class="l-nav-primary-desktop">
+            <div class="l-nav-primary-desktop__menu">
+              <ul class="l-nav-primary-desktop__menu-container">
+                <li class="l-nav-primary-desktop__menu-item l-nav-primary-desktop__menu-item--main"><h1>Charlie Astrada</h1></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#about" class="h-light">About</a></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#work" class="h-light">Work</a></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#skills" class="h-light">Skills</a></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#get-in-touch" class="h-light">Get in Touch</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
       <span onclick="openNav()" class="c-overlay__openbtn"><i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -40,12 +52,12 @@
       <section id="about" class="t-section l-section c-hero l-section--hero">
         <h1 class="c-hero__header">Charlie Astrada</h1>
         <article class="l-article l-article--hero">
-          <p><a href="#">Up-and-Coming</a> Fullstack Engineer.</p>
-          <p>I write <a href="#">code</a> and <a href="#">analyze data</a>.</p>
-          <p>I enjoy strategic thinking.</p>
-          <p>I grew up in Washington, DC.</p>
-          <p>I live in Buenos Aires.</p>
-          <p>Life is good.</p>
+          <p class="c-hero__text"><a href="#">Up-and-Coming</a> Fullstack Engineer.</p>
+          <p class="c-hero__text">I write <a href="#">code</a> and <a href="#">analyze data</a>.</p>
+          <p class="c-hero__text">I enjoy strategic thinking.</p>
+          <p class="c-hero__text">I grew up in Washington, DC.</p>
+          <p class="c-hero__text">I live in Buenos Aires.</p>
+          <p class="c-hero__text">Life is good.</p>
         </article>
 
         <footer class="c-scroll-indicator__container">
