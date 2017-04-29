@@ -3,11 +3,13 @@
 .l-container {
   &__label-group {
     width: 100%;
+    max-width: 490px;
     margin-top: 59px;
   }
 
   &__repo-link-group {
     width: 75%;
+    max-width: 390px;
     margin: 40px 0;
   }
 }
