@@ -849,6 +849,9 @@ body {
 .l-section {
   padding-left: 20px;
   padding-right: 20px; }
+  @media screen and (min-width: 568px) {
+    .l-section--highlight {
+      font-size: 2em; } }
   .l-section__header {
     padding-left: 33px;
     padding-top: 48px; }
@@ -863,6 +866,9 @@ body {
 .l-article--showcase {
   border-bottom: 3px solid #FDF6E3;
   margin-bottom: 48px; }
+  @media screen and (min-width: 568px) {
+    .l-article--showcase {
+      border-bottom: none; } }
 .l-article--skills {
   margin-bottom: 135px; }
 
@@ -1032,6 +1038,49 @@ body {
       .c-overlay__openbtn {
         display: none; } }
 
+.c-tabs {
+  margin: 0 auto;
+  max-width: 900px; }
+  .c-tabs--state {
+    visibility: hidden;
+    position: absolute;
+    left: -10000px; }
+  .c-tabs__labels-container {
+    list-style: none;
+    color: black;
+    display: none;
+    height: 100%;
+    justify-content: flex-start; }
+    @media screen and (min-width: 568px) {
+      .c-tabs__labels-container {
+        display: flex;
+        flex-direction: column; } }
+  .c-tabs__label {
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 18px; }
+  @media screen and (min-width: 568px) {
+    .c-tabs__content {
+      flex-grow: 1; }
+      .c-tabs__content > article {
+        display: none; } }
+  @media screen and (min-width: 568px) {
+    .c-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap; }
+      .c-tabs__label {
+        display: inline-block; } }
+
+#calculator:checked ~ .c-tabs__content #c-tab__calc,
+#product-listing:checked ~ .c-tabs__content #c-tab__prod-listing,
+#various-forms:checked ~ .c-tabs__content #c-tab__various-forms,
+#same-page-form:checked ~ .c-tabs__content #c-tab__same-page-form,
+#flexy-grid:checked ~ .c-tabs__content #c-tab__flexy-grid,
+#ui-framework:checked ~ .c-tabs__content #c-tab__ui-framework {
+  display: flex;
+  min-width: 100%; }
+
 .c-meter {
   border: 1px solid #512828; }
   .c-meter__frontend-bar {
@@ -1067,9 +1116,15 @@ body {
   .t-section__header--highlight {
     color: #40403b;
     font-size: 16px; }
+    @media screen and (min-width: 568px) {
+      .t-section__header--highlight {
+        font-size: 36px; } }
   .t-section__cta {
     color: #40403b;
     font-size: 24px; }
+    @media screen and (min-width: 568px) {
+      .t-section__cta {
+        font-size: 60px; } }
   .t-section__social-media-group {
     width: 50%;
     padding: 10px; }
@@ -1090,6 +1145,9 @@ body {
 .t-signature {
   font: 26px "Euphoria Script", cursive;
   color: #40403b; }
+  @media screen and (min-width: 568px) {
+    .t-signature {
+      font-size: 40px; } }
 
 .t-repo-link {
   color: #40403b;

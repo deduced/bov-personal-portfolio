@@ -49,11 +49,19 @@ body {
   &__header--highlight {
     color: $text-color-dark;
     font-size: 16px;
+
+    @include media(tablet) {
+      font-size: 36px;
+    }
   }
 
   &__cta {
     color: $text-color-dark;
     font-size: 24px;
+
+    @include media(tablet) {
+      font-size: 60px;
+    }
   }
 
   &__social-media-group {
@@ -87,6 +95,10 @@ body {
 .t-signature {
   font: 26px $signature-font-stack;
   color: $text-color-dark;
+
+  @include media(tablet) {
+    font-size: 40px;
+  }
 }
 
 .t-repo-link {

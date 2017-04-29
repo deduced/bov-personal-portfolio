@@ -1,0 +1,60 @@
+.c-tabs {
+  margin: 0 auto;
+  max-width: 900px;
+
+  &--state {
+    visibility: hidden;
+    position: absolute;
+    left: -10000px;
+  }
+
+  &__labels-container {
+    list-style: none;
+    color: black;
+    display: none;
+    height: 100%;
+    justify-content: flex-start;
+
+    @include media(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__label {
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 18px;
+  }
+
+  &__content {
+
+    @include media (tablet) {
+      flex-grow: 1;
+      & > article {
+        display: none;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    &__label {
+      display: inline-block;
+    }
+  }
+}
+
+
+#calculator:checked ~ .c-tabs__content #c-tab__calc,
+#product-listing:checked ~ .c-tabs__content #c-tab__prod-listing,
+#various-forms:checked ~ .c-tabs__content #c-tab__various-forms,
+#same-page-form:checked ~ .c-tabs__content #c-tab__same-page-form,
+#flexy-grid:checked ~ .c-tabs__content #c-tab__flexy-grid,
+#ui-framework:checked ~ .c-tabs__content #c-tab__ui-framework {
+  display: flex;
+  min-width: 100%;
+}

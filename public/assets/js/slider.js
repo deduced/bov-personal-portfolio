@@ -1,3 +1,5 @@
+//@TODO -- use a loop
+
 $(document).ready(function() {
 
   $('#slider-1 .c-slider__bullet').first().addClass('c-slider__bullet--active');

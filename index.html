@@ -35,7 +35,8 @@
           <div class="l-nav-primary-desktop">
             <div class="l-nav-primary-desktop__menu">
               <ul class="l-nav-primary-desktop__menu-container">
-                <li class="l-nav-primary-desktop__menu-item l-nav-primary-desktop__menu-item--main"><h1>Charlie Astrada</h1></li>
+                <li class="l-nav-primary-desktop__menu-item l-nav-primary-desktop__menu-item--main">
+                  <h1>Charlie Astrada</h1></li>
                 <li class="l-nav-primary-desktop__menu-item"><a href="#about" class="h-light">About</a></li>
                 <li class="l-nav-primary-desktop__menu-item"><a href="#work" class="h-light">Work</a></li>
                 <li class="l-nav-primary-desktop__menu-item"><a href="#skills" class="h-light">Skills</a></li>
@@ -68,208 +69,231 @@
 
       <section id="work" class="t-section--alt l-section">
         <h2 class="t-section__header--alt l-section__header">Select Works</h2>
-        <article class="l-article l-article--showcase u-centered">
-          <h3 class="t-article__header--showcase t-article__header--alt">Calculator</h3>
 
-          <div class="c-slider">
-            <div id="slider-1" class="c-slider__container">
-              <div class="c-slider__item c-slider__item--active">
-                <img src="public/assets/images/calculator-img.png" alt="calculator project screenshot">
-              </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/calculator-gif.gif" alt="calculator project animated gif">
-              </div>
-              <div class="c-slider__bullet-group">
-                <span class="c-slider__bullet c-slider__bullet--active"></span>
-                <span class="c-slider__bullet"></span>
-              </div>
-            </div>
+        <div class="c-tabs">
+          <input class="c-tabs--state" type="radio" name="grp-work" id="calculator" checked>
+          <input class="c-tabs--state" type="radio" name="grp-work" id="product-listing">
+          <input class="c-tabs--state" type="radio" name="grp-work" id="various-forms">
+          <input class="c-tabs--state" type="radio" name="grp-work" id="same-page-form">
+          <input class="c-tabs--state" type="radio" name="grp-work" id="flexy-grid">
+          <input class="c-tabs--state" type="radio" name="grp-work" id="ui-framework">
+
+          <div class="c-tabs__labels">
+            <ul class="c-tabs__labels-container">
+              <label for="calculator" id="tab-calculator"><li class="c-tabs__label">Calculator</li></label>
+              <label for="product-listing" id="tab-product-listing"><li class="c-tabs__label">Product Listing Page</li></label>
+              <label for="various-forms" id="tab-various-forms"><li class="c-tabs__label">Various Forms</li></label>
+              <label for="same-page-form" id="tab-same-page-form"><li class="c-tabs__label">Same-page Form</li></label>
+              <label for="flexy-grid" id="tab-flexy-grid"><li class="c-tabs__label">Flexy Flexbox Grid</li></label>
+              <label for="ui-framework" id="tab-ui-framework"><li class="c-tabs__label">UI Framework</li></label>
+            </ul>
           </div>
-          <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
-          <div class="l-container__label-group l-flexy-row u-space-around">
-            <span class="label t-label--primary">HTML5</span>
-            <span class="label t-label--primary">CSS3</span>
-            <span class="label t-label--primary">Vanilla JS</span>
-          </div>
-          <div class="l-container__repo-link-group l-flexy-row u-space-around">
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="https://deduced.github.io/moderndev-calculator/calculator.html"
-                target="_blank"><span class="t-repo-link">Demo</span></a>
-            </div>
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
+
+          <div class="c-tabs__content">
+            <article id="c-tab__calc" class="l-article l-article--showcase u-centered">
+              <h3 class="t-article__header--showcase t-article__header--alt">Calculator</h3>
+
+              <div class="c-slider">
+                <div id="slider-1" class="c-slider__container">
+                  <div class="c-slider__item c-slider__item--active">
+                    <img src="public/assets/images/calculator-img.png" alt="calculator project screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/calculator-gif.gif" alt="calculator project animated gif">
+                  </div>
+                  <div class="c-slider__bullet-group">
+                    <span class="c-slider__bullet c-slider__bullet--active"></span>
+                    <span class="c-slider__bullet"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
+              <div class="l-container__label-group l-flexy-row u-space-around">
+                <span class="label t-label--primary">HTML5</span>
+                <span class="label t-label--primary">CSS3</span>
+                <span class="label t-label--primary">Vanilla JS</span>
+              </div>
+              <div class="l-container__repo-link-group l-flexy-row u-space-around">
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="https://deduced.github.io/moderndev-calculator/calculator.html"
+                    target="_blank"><span class="t-repo-link">Demo</span></a>
+                </div>
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
               public/assets/images/github-icon@3x.png 3x" alt="github logo"><a href="https://github.com/deduced/moderndev-calculator" target="_blank"><span class="t-repo-link">Source</span></a>
-            </div>
-          </div>
-        </article>
+                </div>
+              </div>
+            </article>
 
-        <article class="l-article l-article--showcase u-centered">
-          <h3 class="t-article__header--showcase t-article__header--alt">Product Listing Page</h3>
-          <div class="c-slider">
-            <div id="slider-2" class="c-slider__container">
-              <div class="c-slider__item c-slider__item--active">
-                <img src="public/assets/images/product-listing-image.png" alt="Product listing project screenshot">
+            <article id="c-tab__prod-listing" class="l-article l-article--showcase u-centered">
+              <h3 class="t-article__header--showcase t-article__header--alt">Product Listing Page</h3>
+              <div class="c-slider">
+                <div id="slider-2" class="c-slider__container">
+                  <div class="c-slider__item c-slider__item--active">
+                    <img src="public/assets/images/product-listing-image.png" alt="Product listing project screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/product-listing-image-2.png" alt="Product listing project screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/product-listing-image-3.png" alt="Product listing project screenshot">
+                  </div>
+                  <div class="c-slider__bullet-group">
+                    <span class="c-slider__bullet c-slider__bullet--active"></span>
+                    <span class="c-slider__bullet"></span>
+                    <span class="c-slider__bullet"></span>
+                  </div>
+                </div>
               </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/product-listing-image-2.png" alt="Product listing project screenshot">
+              <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
+              <div class="l-container__label-group l-flexy-row u-space-around">
+                <span class="label t-label--primary">HTML5</span>
+                <span class="label t-label--primary">CSS3</span>
+                <span class="label t-label--primary">Vanilla JS</span>
               </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/product-listing-image-3.png" alt="Product listing project screenshot">
-              </div>
-              <div class="c-slider__bullet-group">
-                <span class="c-slider__bullet c-slider__bullet--active"></span>
-                <span class="c-slider__bullet"></span>
-                <span class="c-slider__bullet"></span>
-              </div>
-            </div>
-          </div>
-          <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
-          <div class="l-container__label-group l-flexy-row u-space-around">
-            <span class="label t-label--primary">HTML5</span>
-            <span class="label t-label--primary">CSS3</span>
-            <span class="label t-label--primary">Vanilla JS</span>
-          </div>
-          <div class="l-container__repo-link-group l-flexy-row u-space-around">
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="https://deduced.github.io/moderndev-product-listing-page/product-listing-page.html"
-                target="_blank"><span class="t-repo-link">Demo</span></a>
-            </div>
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
+              <div class="l-container__repo-link-group l-flexy-row u-space-around">
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="https://deduced.github.io/moderndev-product-listing-page/product-listing-page.html"
+                    target="_blank"><span class="t-repo-link">Demo</span></a>
+                </div>
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
               public/assets/images/github-icon@3x.png 3x" alt="github logo"><a href="https://github.com/deduced/moderndev-product-listing-page" target="_blank"><span class="t-repo-link">Source</span></a>
-            </div>
-        </article>
+                </div>
+            </article>
 
-        <article class="l-article l-article--showcase u-centered">
-          <h3 class="t-article__header--showcase t-article__header--alt">Various Forms</h3>
+            <article id="c-tab__various-forms" class="l-article l-article--showcase u-centered">
+              <h3 class="t-article__header--showcase t-article__header--alt">Various Forms</h3>
 
-          <div class="c-slider">
-            <div id="slider-3" class="c-slider__container">
-              <div class="c-slider__item c-slider__item--active">
-                <img src="public/assets/images/form-login.png" alt="Login form screenshot">
+              <div class="c-slider">
+                <div id="slider-3" class="c-slider__container">
+                  <div class="c-slider__item c-slider__item--active">
+                    <img src="public/assets/images/form-login.png" alt="Login form screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/form-search.png" alt="Search Form screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/form-scheduling.png" alt="Scheduling Form screenshot">
+                  </div>
+                  <div class="c-slider__bullet-group">
+                    <span class="c-slider__bullet c-slider__bullet--active"></span>
+                    <span class="c-slider__bullet"></span>
+                    <span class="c-slider__bullet"></span>
+                  </div>
+                </div>
               </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/form-search.png" alt="Search Form screenshot">
+              <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
+              <div class="l-container__label-group l-flexy-row u-space-around">
+                <span class="label t-label--primary">HTML5</span>
+                <span class="label t-label--primary">CSS3</span>
+                <span class="label t-label--primary">Vanilla JS</span>
               </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/form-scheduling.png" alt="Scheduling Form screenshot">
-              </div>
-              <div class="c-slider__bullet-group">
-                <span class="c-slider__bullet c-slider__bullet--active"></span>
-                <span class="c-slider__bullet"></span>
-                <span class="c-slider__bullet"></span>
-              </div>
-            </div>
-          </div>
-          <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
-          <div class="l-container__label-group l-flexy-row u-space-around">
-            <span class="label t-label--primary">HTML5</span>
-            <span class="label t-label--primary">CSS3</span>
-            <span class="label t-label--primary">Vanilla JS</span>
-          </div>
-          <div class="l-container__repo-link-group l-flexy-row u-space-around">
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon">
-              <a href="https://deduced.github.io/moderndev-forms-inputs/" target="_blank"><span class="t-repo-link">Demo</span></a>
-            </div>
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
+              <div class="l-container__repo-link-group l-flexy-row u-space-around">
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon">
+                  <a href="https://deduced.github.io/moderndev-forms-inputs/" target="_blank"><span class="t-repo-link">Demo</span></a>
+                </div>
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
               public/assets/images/github-icon@3x.png 3x" alt="github logo"><a href="https://github.com/deduced/moderndev-forms-inputs" target="_blank"><span class="t-repo-link">Source</span></a>
-            </div>
-        </article>
+                </div>
+            </article>
 
-        <article class="l-article l-article--showcase u-centered">
-          <h3 class="t-article__header--showcase t-article__header--alt">Same-page Form</h3>
+            <article id="c-tab__same-page-form" class="l-article l-article--showcase u-centered">
+              <h3 class="t-article__header--showcase t-article__header--alt">Same-page Form</h3>
 
-          <div class="c-slider">
-            <div id="slider-4" class="c-slider__container">
-              <div class="c-slider__item c-slider__item--active">
-                <img src="public/assets/images/form-same-page.png" alt="Same-page form screenshot">
+              <div class="c-slider">
+                <div id="slider-4" class="c-slider__container">
+                  <div class="c-slider__item c-slider__item--active">
+                    <img src="public/assets/images/form-same-page.png" alt="Same-page form screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/form-same-page.gif" alt="Same-page form gif">
+                  </div>
+                  <div class="c-slider__bullet-group">
+                    <span class="c-slider__bullet c-slider__bullet--active"></span>
+                    <span class="c-slider__bullet"></span>
+                  </div>
+                </div>
               </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/form-same-page.gif" alt="Same-page form gif">
-              </div>
-              <div class="c-slider__bullet-group">
-                <span class="c-slider__bullet c-slider__bullet--active"></span>
-                <span class="c-slider__bullet"></span>
-              </div>
-            </div>
-          </div>
 
-          <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
-          <div class="l-container__label-group l-flexy-row u-space-around">
-            <span class="label t-label--primary">HTML5</span>
-            <span class="label t-label--primary">CSS3</span>
-            <span class="label t-label--primary">Vanilla JS</span>
-          </div>
-          <div class="l-container__repo-link-group l-flexy-row u-space-around">
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="https://snagy22000.github.io/LMD-UI-Framework/#samepageform"
-                target="_blank"><span class="t-repo-link">Demo</span></a>
-            </div>
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
+              <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
+              <div class="l-container__label-group l-flexy-row u-space-around">
+                <span class="label t-label--primary">HTML5</span>
+                <span class="label t-label--primary">CSS3</span>
+                <span class="label t-label--primary">Vanilla JS</span>
+              </div>
+              <div class="l-container__repo-link-group l-flexy-row u-space-around">
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="https://snagy22000.github.io/LMD-UI-Framework/#samepageform"
+                    target="_blank"><span class="t-repo-link">Demo</span></a>
+                </div>
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
               public/assets/images/github-icon@3x.png 3x" alt="github logo"><a href="https://github.com/snagy22000/LMD-UI-Framework/blob/gh-pages/src/styles/css/animated-form.css" target="_blank"><span class="t-repo-link">Source</span></a>
-            </div>
-        </article>
+                </div>
+            </article>
 
-        <article class="l-article l-article--showcase u-centered">
-          <h3 class="t-article__header--showcase t-article__header--alt">Flexy Flexbox Grid</h3>
-          <img src="public/assets/images/flexy-grid-image.png" alt="Flexy Flexbox Grid Screenshot">
-          <div>SCROLL POINTS</div>
-          <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
-          <div class="l-container__label-group l-flexy-row u-space-around">
-            <span class="label t-label--primary">HTML5</span>
-            <span class="label t-label--primary">CSS3</span>
-            <span class="label t-label--primary">Vanilla JS</span>
-          </div>
-          <div class="l-container__repo-link-group l-flexy-row u-space-around">
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="#" target="_blank"><span class="t-repo-link">Demo</span></a>
-            </div>
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
+            <article id="c-tab__flexy-grid" class="l-article l-article--showcase u-centered">
+              <h3 class="t-article__header--showcase t-article__header--alt">Flexy Flexbox Grid</h3>
+              <img src="public/assets/images/flexy-grid-image.png" alt="Flexy Flexbox Grid Screenshot">
+              <div>SCROLL POINTS</div>
+              <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
+              <div class="l-container__label-group l-flexy-row u-space-around">
+                <span class="label t-label--primary">HTML5</span>
+                <span class="label t-label--primary">CSS3</span>
+                <span class="label t-label--primary">Vanilla JS</span>
+              </div>
+              <div class="l-container__repo-link-group l-flexy-row u-space-around">
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon"><a href="#" target="_blank"><span class="t-repo-link">Demo</span></a>
+                </div>
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
               public/assets/images/github-icon@3x.png 3x" alt="github logo"><a href="https://github.com/deduced/flexy-flexbox-grid-boilerplate" target="_blank"><span class="t-repo-link">Source</span></a>
-            </div>
-        </article>
+                </div>
+            </article>
 
-        <article class="l-article l-article--showcase u-centered">
-          <h3 class="t-article__header--showcase t-article__header--alt">UI Framework</h3>
+            <article id="c-tab__ui-framework" class="l-article l-article--showcase u-centered">
+              <h3 class="t-article__header--showcase t-article__header--alt">UI Framework</h3>
 
-          <div class="c-slider">
-            <div id="slider-6" class="c-slider__container">
-              <div class="c-slider__item c-slider__item--active">
-                <img src="public/assets/images/ui-framework.png" alt="UI Framework Screenshot">
+              <div class="c-slider">
+                <div id="slider-6" class="c-slider__container">
+                  <div class="c-slider__item c-slider__item--active">
+                    <img src="public/assets/images/ui-framework.png" alt="UI Framework Screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/ui-framework-2.png" alt="UI Framework Screenshot">
+                  </div>
+                  <div class="c-slider__item">
+                    <img src="public/assets/images/ui-framework-3.png" alt="UI Framework Screenshot">
+                  </div>
+                  <div class="c-slider__bullet-group">
+                    <span class="c-slider__bullet c-slider__bullet--active"></span>
+                    <span class="c-slider__bullet"></span>
+                    <span class="c-slider__bullet"></span>
+                  </div>
+                </div>
               </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/ui-framework-2.png" alt="UI Framework Screenshot">
+              <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
+              <div class="l-container__label-group l-flexy-row u-space-around">
+                <span class="label t-label--primary">HTML5</span>
+                <span class="label t-label--primary">CSS3</span>
+                <span class="label t-label--primary">Vanilla JS</span>
               </div>
-              <div class="c-slider__item">
-                <img src="public/assets/images/ui-framework-3.png" alt="UI Framework Screenshot">
-              </div>
-              <div class="c-slider__bullet-group">
-                <span class="c-slider__bullet c-slider__bullet--active"></span>
-                <span class="c-slider__bullet"></span>
-                <span class="c-slider__bullet"></span>
-              </div>
-            </div>
-          </div>
-          <div class="t-article__description--alt">This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.</div>
-          <div class="l-container__label-group l-flexy-row u-space-around">
-            <span class="label t-label--primary">HTML5</span>
-            <span class="label t-label--primary">CSS3</span>
-            <span class="label t-label--primary">Vanilla JS</span>
-          </div>
-          <div class="l-container__repo-link-group l-flexy-row u-space-around">
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon">
-              <a href="https://snagy22000.github.io/LMD-UI-Framework" target="_blank"><span class="t-repo-link">Demo</span></a>
-            </div>
-            <div class="l-flexy-row u-centered">
-              <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
+              <div class="l-container__repo-link-group l-flexy-row u-space-around">
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/link-3.png" srcset="public/assets/images/link-3@2x.png 2x, public/assets/images/link-3.pngpublic/assets/images/link-3@3x.png 3x" alt="link icon">
+                  <a href="https://snagy22000.github.io/LMD-UI-Framework" target="_blank"><span class="t-repo-link">Demo</span></a>
+                </div>
+                <div class="l-flexy-row u-centered">
+                  <img src="public/assets/images/github-icon.png" srcset="public/assets/images/github-icon@2x.png 2x,
               public/assets/images/github-icon@3x.png 3x" alt="github logo"><a href="https://github.com/snagy22000/LMD-UI-Framework" target="_blank"><span class="t-repo-link">Source</span></a>
-            </div>
-        </article>
+                </div>
+            </article>
+          </div>
+        </div>
 
       </section>
 
