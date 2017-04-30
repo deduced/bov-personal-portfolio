@@ -1094,6 +1094,32 @@ body {
   display: flex;
   min-width: 100%; }
 
+.c-tooltip-toggle {
+  cursor: pointer;
+  position: relative; }
+  .c-tooltip-toggle::before {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    background-color: #ebf8fe;
+    border-radius: 5px;
+    color: #000000;
+    content: attr(aria-label);
+    padding: 1rem;
+    text-transform: none;
+    transition: all 0.5s ease;
+    width: 160px; }
+  .c-tooltip-toggle::before, .c-tooltip-toggle::after {
+    color: #000000;
+    font-family: monospace;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center; }
+  .c-tooltip-toggle:focus::before, .c-tooltip-toggle:focus::after, .c-tooltip-toggle:hover::before, .c-tooltip-toggle:hover::after {
+    opacity: 1;
+    transition: all 0.75s ease; }
+
 .c-meter {
   border: 1px solid #512828; }
   .c-meter__frontend-bar {
