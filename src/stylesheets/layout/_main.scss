@@ -5,6 +5,10 @@
   &--hero {
     @extend .l-flexy-col-xs;
 
+    @include media(tablet) {
+      margin-top: 35px;
+    }
+
   }
 
   &--highlight {

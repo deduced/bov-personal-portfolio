@@ -12,6 +12,13 @@
 .l-nav-primary-desktop {
   display: none;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(15, 15, 16);
+  z-index: 1;
+
 
   &__menu-container {
     @extend .l-flexy-row;
