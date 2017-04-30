@@ -51,12 +51,9 @@ body {
     font-size: 16px;
 
     @include media(tablet) {
-      font-size: 26px;
+      font-size: 28px;
     }
 
-    @include media(desktop) {
-      font-size: 36px;
-    }
   }
 
   &__cta {
@@ -64,11 +61,7 @@ body {
     font-size: 24px;
 
     @include media(tablet) {
-      font-size: 40px;
-    }
-
-    @include media(desktop) {
-      font-size: 60px;
+      font-size: 48px;
     }
   }
 

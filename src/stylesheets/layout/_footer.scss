@@ -6,8 +6,4 @@
   @include media(tablet) {
     font-size: 2em !important;
   }
-
-  @include media(desktop) {
-    font-size: 2.5em !important;
-  }
 }

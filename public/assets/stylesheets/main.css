@@ -855,16 +855,13 @@ body {
 @media screen and (min-width: 568px) {
   .fa {
     font-size: 2em !important; } }
-@media screen and (min-width: 1024px) {
-  .fa {
-    font-size: 2.5em !important; } }
 
 .l-section {
   padding-left: 20px;
   padding-right: 20px; }
   @media screen and (min-width: 568px) {
     .l-section--hero {
-      margin-top: 35px; } }
+      margin-top: 75px; } }
   .l-section__header {
     padding-left: 33px;
     padding-top: 48px; }
@@ -896,9 +893,12 @@ body {
         display: none; } }
   .c-hero__text {
     font-size: 1em; }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 568px) {
       .c-hero__text {
         font-size: 1.5em; } }
+    @media screen and (min-width: 1024px) {
+      .c-hero__text {
+        font-size: 2.5em; } }
 
 .label {
   font-size: 9px;
@@ -1157,19 +1157,13 @@ body {
     font-size: 16px; }
     @media screen and (min-width: 568px) {
       .t-section__header--highlight {
-        font-size: 26px; } }
-    @media screen and (min-width: 1024px) {
-      .t-section__header--highlight {
-        font-size: 36px; } }
+        font-size: 28px; } }
   .t-section__cta {
     color: #40403b;
     font-size: 24px; }
     @media screen and (min-width: 568px) {
       .t-section__cta {
-        font-size: 40px; } }
-    @media screen and (min-width: 1024px) {
-      .t-section__cta {
-        font-size: 60px; } }
+        font-size: 48px; } }
   .t-section__social-media-group {
     width: 50%;
     padding: 10px; }
