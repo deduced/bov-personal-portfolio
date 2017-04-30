@@ -936,13 +936,13 @@ body {
     transform: rotate(55deg);
     font-size: 13px; }
     .c-bar-graph__xlabel--skill-1 {
-      top: 350px; }
+      bottom: -48px; }
     .c-bar-graph__xlabel--skill-2 {
-      top: 348px; }
+      bottom: -48px; }
     .c-bar-graph__xlabel--skill-3 {
-      top: 340px; }
+      bottom: -40px; }
     .c-bar-graph__xlabel--skill-4 {
-      top: 342px; }
+      bottom: -42px; }
   .c-bar-graph__bar {
     width: 25px;
     border-radius: 2px 2px 0 0; }
@@ -1157,11 +1157,17 @@ body {
     font-size: 16px; }
     @media screen and (min-width: 568px) {
       .t-section__header--highlight {
+        font-size: 26px; } }
+    @media screen and (min-width: 1024px) {
+      .t-section__header--highlight {
         font-size: 36px; } }
   .t-section__cta {
     color: #40403b;
     font-size: 24px; }
     @media screen and (min-width: 568px) {
+      .t-section__cta {
+        font-size: 40px; } }
+    @media screen and (min-width: 1024px) {
       .t-section__cta {
         font-size: 60px; } }
   .t-section__social-media-group {
@@ -1187,6 +1193,9 @@ body {
   font: 26px "Euphoria Script", cursive;
   color: #40403b; }
   @media screen and (min-width: 568px) {
+    .t-signature {
+      font-size: 32px; } }
+  @media screen and (min-width: 1024px) {
     .t-signature {
       font-size: 40px; } }
 

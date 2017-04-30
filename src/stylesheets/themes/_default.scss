@@ -51,6 +51,10 @@ body {
     font-size: 16px;
 
     @include media(tablet) {
+      font-size: 26px;
+    }
+
+    @include media(desktop) {
       font-size: 36px;
     }
   }
@@ -60,6 +64,10 @@ body {
     font-size: 24px;
 
     @include media(tablet) {
+      font-size: 40px;
+    }
+
+    @include media(desktop) {
       font-size: 60px;
     }
   }
@@ -101,6 +109,10 @@ body {
   color: $text-color-dark;
 
   @include media(tablet) {
+    font-size: 32px;
+  }
+
+  @include media(desktop) {
     font-size: 40px;
   }
 }
