@@ -1328,6 +1328,22 @@ body {
     -webkit-transition: all 0.75s ease;
     transition: all 0.75s ease; }
 
+.c-back-to-top {
+  position: fixed;
+  bottom: 2em;
+  right: 0px;
+  text-decoration: none;
+  color: #000000;
+  background-color: rgba(235, 235, 235, 0.8);
+  font-size: 12px;
+  padding: 1em;
+  display: none; }
+  .c-back-to-top:hover {
+    background-color: rgba(135, 135, 135, 0.5); }
+  @media screen and (min-width: 568px) {
+    .c-back-to-top {
+      display: none !important; } }
+
 .c-meter {
   border: 1px solid #512828; }
   .c-meter__frontend-bar {
