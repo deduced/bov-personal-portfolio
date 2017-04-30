@@ -846,12 +846,16 @@ body {
     .l-nav-primary-desktop {
       display: block; } }
 
+@media screen and (min-width: 568px) {
+  .fa {
+    font-size: 2em !important; } }
+@media screen and (min-width: 1024px) {
+  .fa {
+    font-size: 2.5em !important; } }
+
 .l-section {
   padding-left: 20px;
   padding-right: 20px; }
-  @media screen and (min-width: 568px) {
-    .l-section--highlight {
-      font-size: 2em; } }
   .l-section__header {
     padding-left: 33px;
     padding-top: 48px; }
@@ -1128,6 +1132,8 @@ body {
   .t-section__social-media-group {
     width: 50%;
     padding: 10px; }
+  .t-section__social-media-item {
+    color: #40403b; }
   .t-section--footer {
     min-width: 100%; }
 

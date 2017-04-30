@@ -69,6 +69,10 @@ body {
     padding: 10px;
   }
 
+  &__social-media-item {
+    color: $text-color-dark;
+  }
+
   &--footer {
     min-width: 100%;
   }

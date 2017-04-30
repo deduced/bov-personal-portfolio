@@ -9,9 +9,6 @@
 
   &--highlight {
     @extend .l-flexy-col-xs;
-    @include media(tablet) {
-      font-size: 2em;
-    }
   }
 
   &__header {
