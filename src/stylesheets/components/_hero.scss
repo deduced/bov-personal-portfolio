@@ -7,7 +7,7 @@
     padding-top: 70px;
     margin-bottom: 30px;
 
-    // Remove the hero header for >= tablet to make room for the Desktop nav
+    /* Remove the hero header for >= tablet to make room for the Desktop nav*/
     @include media(tablet) {
       display: none;
     }

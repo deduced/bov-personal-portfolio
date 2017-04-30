@@ -1,4 +1,4 @@
-// ------ CONTAINERS ------ //
+/* ------ CONTAINERS ------ //*/
 
 .l-container {
   &__label-group {
@@ -16,21 +16,28 @@
 
 
 
-// -------- Layout Utility Classes --------- //
+/* -------- Layout Utility Classes --------- //*/
 .u-centered {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .u-justify-center {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .u-space-around {
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .u-space-between {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .u-pos-relative {

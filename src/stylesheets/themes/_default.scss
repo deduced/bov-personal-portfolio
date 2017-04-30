@@ -1,35 +1,35 @@
-// -----------------------------------------------------------------------------
-// The theme is a custom black-and-white with an accent based on the brand color in _variables
-// -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------*/
+/* The theme is a custom black-and-white with an accent based on the brand color in _variables*/
+/* -----------------------------------------------------------------------------*/
 
-// ----- Text Colors ----- //
+/* ----- Text Colors ----- //*/
 $text-color-dark: rgb(64, 64, 59);
 $text-color-faded: rgba(64, 64, 59, 0.5);
 $text-color-light: rgb(255, 255, 255);
 
-// Background Colors to use for main and alternate
+/* Background Colors to use for main and alternate*/
 $background-main: rgb(15, 15, 16);
 $background-alt: rgb(255, 255, 255);
 
-// Font Stacks
+/* Font Stacks*/
 $text-font-stack: 'Lora', serif !default;
 $signature-font-stack: 'Euphoria Script', cursive !default;
 
 
-// ------ BASE STYLES ------//
+/* ------ BASE STYLES ------//*/
 body {
   background-color: $background-main;
 }
 
 
-// ----- WRAPPERS ---------//
+/* ----- WRAPPERS ---------//*/
 
-// Site Wrapper
+/* Site Wrapper*/
 .wrapper {
   background-color: $background-main;
 }
 
-// ------ SECTIONS -------- //
+/* ------ SECTIONS -------- //*/
 .t-section {
   background-color: $background-main;
 
@@ -119,7 +119,7 @@ body {
 }
 
 
-// Components
+/* Components*/
 .t-label--primary {
   background-color: #242526;
   color: $text-color-light;

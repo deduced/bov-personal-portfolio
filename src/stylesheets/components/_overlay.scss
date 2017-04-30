@@ -8,6 +8,7 @@
     top: 0;
     background-color: rgba(0,0,0, 0.9);
     overflow-x: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 
     &__content {
@@ -24,6 +25,7 @@
       font-size: 5vh;
       color: #ffffff;
       display: block; /* Display block instead of inline */
+      -webkit-transition: 0.3s;
       transition: 0.3s; /* Transition effects on hover (color) */
 
       &--social-links {

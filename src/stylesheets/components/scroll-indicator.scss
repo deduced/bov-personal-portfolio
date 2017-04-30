@@ -2,14 +2,22 @@
 	position: absolute;
 	left: 50%;
 	font-size: 50px;
-	animation: bounce 1s infinite;
+	-webkit-animation: bounce 1s infinite;
+	        animation: bounce 1s infinite;
 
 	&__container {
 		position: relative;
-		flex-grow: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
 	}
 
 	@at-root {
+		@-webkit-keyframes bounce {
+			 0% { bottom: 35%; }
+			 50%   { bottom: 40%; }
+			 100% { bottom: 35%; }
+		}
 		@keyframes bounce {
 			 0% { bottom: 35%; }
 			 50%   { bottom: 40%; }

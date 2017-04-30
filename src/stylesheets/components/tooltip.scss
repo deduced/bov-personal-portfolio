@@ -1,11 +1,8 @@
-
-
-
 .c-tooltip-toggle {
   cursor: pointer;
   position: relative;
 
-  //Tooltip text container
+  /*Tooltip text container*/
   &::before {
     position: absolute;
     top: -40px;
@@ -16,12 +13,13 @@
     content: attr(aria-label);
     padding: 1rem;
     text-transform: none;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     width: 160px;
   }
 
 
-  //Setting up the transition
+  /*Setting up the transition*/
   &::before,
   &::after {
     color: #000000;
@@ -32,12 +30,13 @@
     text-align: center;
   }
 
-  //Triggering the transition
+  /*Triggering the transition*/
   &:focus::before,
   &:focus::after,
   &:hover::before,
   &:hover::after {
     opacity: 1;
+    -webkit-transition: all 0.75s ease;
     transition: all 0.75s ease;
   }
 }

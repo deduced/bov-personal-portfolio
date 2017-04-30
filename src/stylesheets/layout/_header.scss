@@ -1,9 +1,9 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------*/
+/* This file contains all styles related to the header of the site/application.*/
+/* -----------------------------------------------------------------------------*/
 
 .l-nav-primary-mobile {
-  // For >= tablet sized screens, set menu to display: none;
+  /* For >= tablet sized screens, set menu to display: none;*/
   @include media(tablet) {
     display: none;
   }
@@ -23,7 +23,9 @@
   &__menu-container {
     @extend .l-flexy-row;
     list-style: none;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   &__menu-item {
@@ -31,7 +33,9 @@
     margin: 0 1em;
 
     &--main {
-      flex-grow: 1;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
     }
 
     @include media(desktop) {

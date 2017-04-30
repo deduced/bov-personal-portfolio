@@ -800,6 +800,7 @@ body {
 .h-light {
   color: white; }
 
+/* ------ CONTAINERS ------ //*/
 .l-container__label-group {
   width: 100%;
   max-width: 490px;
@@ -809,24 +810,37 @@ body {
   max-width: 390px;
   margin: 40px 0; }
 
+/* -------- Layout Utility Classes --------- //*/
 .u-centered {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
 
 .u-justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .u-space-around {
+  -ms-flex-pack: distribute;
   justify-content: space-around; }
 
 .u-space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .u-pos-relative {
   position: relative; }
 
-@media screen and (min-width: 568px) {
-  .l-nav-primary-mobile {
-    display: none; } }
+/* -----------------------------------------------------------------------------*/
+/* This file contains all styles related to the header of the site/application.*/
+/* -----------------------------------------------------------------------------*/
+.l-nav-primary-mobile {
+  /* For >= tablet sized screens, set menu to display: none;*/ }
+  @media screen and (min-width: 568px) {
+    .l-nav-primary-mobile {
+      display: none; } }
 
 .l-nav-primary-desktop {
   display: none;
@@ -839,11 +853,15 @@ body {
   z-index: 1; }
   .l-nav-primary-desktop__menu-container {
     list-style: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
   .l-nav-primary-desktop__menu-item {
     font-size: .75em;
     margin: 0 1em; }
     .l-nav-primary-desktop__menu-item--main {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
       flex-grow: 1; }
     @media screen and (min-width: 1024px) {
       .l-nav-primary-desktop__menu-item {
@@ -852,6 +870,9 @@ body {
     .l-nav-primary-desktop {
       display: block; } }
 
+/* -----------------------------------------------------------------------------*/
+/* This file contains all styles related to the footer of the site/application.*/
+/* -----------------------------------------------------------------------------*/
 @media screen and (min-width: 568px) {
   .fa {
     font-size: 2em !important; } }
@@ -887,7 +908,8 @@ body {
   padding-left: 20px; }
   .c-hero__header {
     padding-top: 70px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    /* Remove the hero header for >= tablet to make room for the Desktop nav*/ }
     @media screen and (min-width: 568px) {
       .c-hero__header {
         display: none; } }
@@ -914,6 +936,7 @@ body {
     border-bottom: 1px solid #979797;
     height: 320px;
     width: 100%;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
   .c-bar-graph__title--frontend {
     color: #84ceed; }
@@ -922,20 +945,28 @@ body {
   .c-bar-graph__title--other {
     color: #a8b5df; }
   .c-bar-graph__container--ylabels {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     max-width: 120px;
     padding: 20px 10px; }
   .c-bar-graph__container--bars {
     position: relative;
     width: 70%;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
+    -ms-flex-pack: distribute;
     justify-content: space-around; }
   .c-bar-graph__ylabel {
     font-size: 14px; }
   .c-bar-graph__xlabel {
     position: absolute;
     display: inline-block;
+    -webkit-transform: rotate(55deg);
     transform: rotate(55deg);
     font-size: 13px; }
     .c-bar-graph__xlabel--skill-1 {
@@ -968,6 +999,7 @@ body {
   position: absolute;
   left: -1000px;
   opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out; }
   .c-slider__item--active {
     position: static;
@@ -986,6 +1018,7 @@ body {
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .c-slider__bullet--active {
     background: #0C0C11; }
@@ -994,10 +1027,20 @@ body {
   position: absolute;
   left: 50%;
   font-size: 50px;
+  -webkit-animation: bounce 1s infinite;
   animation: bounce 1s infinite; }
   .c-scroll-indicator__container {
     position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1; }
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 35%; }
+  50% {
+    bottom: 40%; }
+  100% {
+    bottom: 35%; } }
 @keyframes bounce {
   0% {
     bottom: 35%; }
@@ -1014,6 +1057,7 @@ body {
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s; }
   .c-overlay__content {
     position: relative;
@@ -1032,6 +1076,7 @@ body {
     color: #ffffff;
     display: block;
     /* Display block instead of inline */
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     /* Transition effects on hover (color) */ }
     .c-overlay__item-inner--social-links {
@@ -1066,10 +1111,17 @@ body {
     color: black;
     display: none;
     height: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start; }
     @media screen and (min-width: 568px) {
       .c-tabs__labels-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column; } }
   .c-tabs__label {
     padding: 15px;
@@ -1077,13 +1129,20 @@ body {
     font-size: 18px; }
   @media screen and (min-width: 568px) {
     .c-tabs__content {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
       flex-grow: 1; }
       .c-tabs__content > article {
         display: none; } }
   @media screen and (min-width: 568px) {
     .c-tabs {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
       .c-tabs__label {
         display: inline-block; } }
@@ -1094,12 +1153,17 @@ body {
 #same-page-form:checked ~ .c-tabs__content #c-tab__same-page-form,
 #flexy-grid:checked ~ .c-tabs__content #c-tab__flexy-grid,
 #ui-framework:checked ~ .c-tabs__content #c-tab__ui-framework {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-width: 100%; }
 
 .c-tooltip-toggle {
   cursor: pointer;
-  position: relative; }
+  position: relative;
+  /*Tooltip text container*/
+  /*Setting up the transition*/
+  /*Triggering the transition*/ }
   .c-tooltip-toggle::before {
     position: absolute;
     top: -40px;
@@ -1110,6 +1174,7 @@ body {
     content: attr(aria-label);
     padding: 1rem;
     text-transform: none;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     width: 160px; }
   .c-tooltip-toggle::before, .c-tooltip-toggle::after {
@@ -1121,16 +1186,23 @@ body {
     text-align: center; }
   .c-tooltip-toggle:focus::before, .c-tooltip-toggle:focus::after, .c-tooltip-toggle:hover::before, .c-tooltip-toggle:hover::after {
     opacity: 1;
+    -webkit-transition: all 0.75s ease;
     transition: all 0.75s ease; }
 
 .c-meter {
   border: 1px solid #512828; }
   .c-meter__frontend-bar {
     background: #84CEED;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
     flex-grow: 3; }
   .c-meter__backend-bar {
     background: #EBF8FE;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end; }
   .c-meter__text {
     font-size: 32px;
@@ -1140,12 +1212,22 @@ body {
   .c-meter__text--backend {
     color: #3A9BC4; }
 
+/* -----------------------------------------------------------------------------*/
+/* The theme is a custom black-and-white with an accent based on the brand color in _variables*/
+/* -----------------------------------------------------------------------------*/
+/* ----- Text Colors ----- //*/
+/* Background Colors to use for main and alternate*/
+/* Font Stacks*/
+/* ------ BASE STYLES ------//*/
 body {
   background-color: #0f0f10; }
 
+/* ----- WRAPPERS ---------//*/
+/* Site Wrapper*/
 .wrapper {
   background-color: #0f0f10; }
 
+/* ------ SECTIONS -------- //*/
 .t-section {
   background-color: #0f0f10; }
   .t-section--alt {
@@ -1203,6 +1285,7 @@ body {
   margin-left: 10px;
   margin-right: 10px; }
 
+/* Components*/
 .t-label--primary {
   background-color: #242526;
   color: white;

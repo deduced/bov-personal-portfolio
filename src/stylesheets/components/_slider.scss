@@ -8,6 +8,7 @@
     position: absolute;
     left: -1000px;
     opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 
     &--active {
@@ -32,6 +33,7 @@
 		border-radius: 50%;
 		display: inline-block;
 		cursor: pointer;
+		-webkit-transition: all 0.3s;
 		transition: all 0.3s;
 
     &--active {
