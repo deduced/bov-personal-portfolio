@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Charlie Astrada | Portfolio Site</title>
   <link rel="stylesheet" href="public/assets/stylesheets/main.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/31f5a0c5db.js"></script>
+  <script src="public/assets/js/scrolling-nav.js" type="text/javascript" defer></script>
+	<script src="public/assets/js/jquery.easing.min.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -20,10 +24,10 @@
             <a href="javascript:void(0)" class="c-overlay__closebtn" onclick="closeNav()">&times;</a>
 
             <div class="c-overlay__content">
-              <a href="#about" class="c-overlay__item-inner" onclick="closeNav()">About</a>
-              <a href="#work" class="c-overlay__item-inner" onclick="closeNav()">Work</a>
-              <a href="#skills" class="c-overlay__item-inner" onclick="closeNav()">Skills</a>
-              <a href="#get-in-touch" class="c-overlay__item-inner" onclick="closeNav()">Get in Touch</a>
+              <a href="#about" class="c-overlay__item-inner page-scroll" onclick="closeNav()">About</a>
+              <a href="#work" class="c-overlay__item-inner page-scroll" onclick="closeNav()">Work</a>
+              <a href="#skills" class="c-overlay__item-inner page-scroll" onclick="closeNav()">Skills</a>
+              <a href="#get-in-touch" class="c-overlay__item-inner page-scroll" onclick="closeNav()">Get in Touch</a>
               <div class="c-overlay__item-inner">
                 <a href="https://github.com/deduced" target="_blank" class="c-overlay__item-inner--social-links"><i class="fa fa-github" aria-hidden="true"></i></a>
                 <a href="https://www.linkedin.com/in/carlos-astrada-3463223/" target="_blank" class="c-overlay__item-inner--social-links"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -37,10 +41,10 @@
               <ul class="l-nav-primary-desktop__menu-container">
                 <li class="l-nav-primary-desktop__menu-item l-nav-primary-desktop__menu-item--main">
                   <h1>Charlie Astrada</h1></li>
-                <li class="l-nav-primary-desktop__menu-item"><a href="#about" class="h-light">About</a></li>
-                <li class="l-nav-primary-desktop__menu-item"><a href="#work" class="h-light">Work</a></li>
-                <li class="l-nav-primary-desktop__menu-item"><a href="#skills" class="h-light">Skills</a></li>
-                <li class="l-nav-primary-desktop__menu-item"><a href="#get-in-touch" class="h-light">Get in Touch</a></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#about" class="h-light page-scroll">About</a></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#work" class="h-light page-scroll">Work</a></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#skills" class="h-light page-scroll">Skills</a></li>
+                <li class="l-nav-primary-desktop__menu-item"><a href="#get-in-touch" class="h-light page-scroll">Get in Touch</a></li>
               </ul>
             </div>
           </div>
@@ -53,11 +57,11 @@
       <section id="about" class="t-section l-section c-hero l-section--hero">
         <h1 class="c-hero__header">Charlie Astrada</h1>
         <article class="l-article l-article--hero">
-          <p class="c-hero__text"><a href="#">Up-and-Coming</a> Fullstack Engineer.</p>
-          <p class="c-hero__text">I write <a href="#">code</a> and <a href="#">analyze data</a>.</p>
-          <p class="c-hero__text">I enjoy strategic thinking.</p>
+          <p class="c-hero__text"><a href="https://bovacademy.com/" target="_blank">Up-and-Coming</a> Fullstack Engineer.</p>
+          <p class="c-hero__text">I write <a href="https://github.com/deduced" target="_blank">code</a> and <a href="https://github.com/deduced" target="_blank">analyze data</a>.</p>
+          <p class="c-hero__text"><a href="http://meteoraffinity.com/" target="_blank">Mildly</a> successful <a href="https://figmoney.com" target="_blank">entrepreneur</a>.</p>
           <p class="c-hero__text">I grew up in Washington, DC.</p>
-          <p class="c-hero__text">I live in Buenos Aires.</p>
+          <p class="c-hero__text">I live in <a href="https://www.youtube.com/watch?v=f2d7p-YOMrg" target="_blank">Buenos Aires</a>.</p>
           <p class="c-hero__text">Life is good.</p>
         </article>
 
