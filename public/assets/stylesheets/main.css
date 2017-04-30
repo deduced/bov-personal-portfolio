@@ -404,361 +404,500 @@ template {
 [hidden] {
   display: none; }
 
+/**/
+/* Flexy*/
+/* Simple Flexbox grid built with SCSS.*/
+/* For the standard CSS version, see `flexy.css`*/
+/* Copyright 2017, Carlos Astrada*/
+/* Free to use under the MIT license.*/
+/* http://www.opensource.org/licenses/mit-license.php*/
+/**/
+/* ------- VARIABLES -------//*/
+/* Breakpoints //*/
+/* ******** FUNCTIONS ******* //*/
+/* Calculate column size %*/
+/* ********* MIXINS ********** //*/
+/* Create uniform margin / padding*/
+/* Create row wrapper which acts as the flexbox parent*/
 .l-flexy-row, .l-nav-primary-desktop__menu-container, .c-bar-graph__container, .c-bar-graph__container--bars, .c-meter, .c-meter__frontend-bar, .c-meter__backend-bar {
+  /* @include spacing((-$flexy-gutter), margin, horizontal);*/
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
+/* ********** PLACEHOLDERS ********* //*/
 .l-flexy-col-xs, .l-section--hero, .l-section--highlight, .l-article--showcase, .c-bar-graph__container--ylabels, .l-flexy-col-sm, .l-flexy-col-md, .l-flexy-col-lg, .l-flexy-col-xs-1, .l-flexy-col-xs-2, .l-flexy-col-xs-3, .l-flexy-col-xs-4, .l-flexy-col-xs-5, .l-flexy-col-xs-6, .l-flexy-col-xs-7, .l-flexy-col-xs-8, .l-flexy-col-xs-9, .l-flexy-col-xs-10, .l-flexy-col-xs-11, .l-flexy-col-xs-12, .l-flexy-col-sm-1, .l-flexy-col-sm-2, .l-flexy-col-sm-3, .l-flexy-col-sm-4, .l-flexy-col-sm-5, .l-flexy-col-sm-6, .l-flexy-col-sm-7, .l-flexy-col-sm-8, .l-flexy-col-sm-9, .l-flexy-col-sm-10, .l-flexy-col-sm-11, .l-flexy-col-sm-12, .l-flexy-col-md-1, .l-flexy-col-md-2, .l-flexy-col-md-3, .l-flexy-col-md-4, .l-flexy-col-md-5, .l-flexy-col-md-6, .l-flexy-col-md-7, .l-flexy-col-md-8, .l-flexy-col-md-9, .l-flexy-col-md-10, .l-flexy-col-md-11, .l-flexy-col-md-12, .l-flexy-col-lg-1, .l-flexy-col-lg-2, .l-flexy-col-lg-3, .l-flexy-col-lg-4, .l-flexy-col-lg-5, .l-flexy-col-lg-6, .l-flexy-col-lg-7, .l-flexy-col-lg-8, .l-flexy-col-lg-9, .l-flexy-col-lg-10, .l-flexy-col-lg-11, .l-flexy-col-lg-12 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px; }
 
 .l-flexy-col-xs, .l-section--hero, .l-section--highlight, .l-article--showcase, .c-bar-graph__container--ylabels, .l-flexy-col-sm, .l-flexy-col-md, .l-flexy-col-lg {
+  -ms-flex-preferred-size: 0;
   flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%; }
 
+/* Generate a set of grid column classes for each namespace*/
+/* .flexy-col-[namespace] for intelligent column division*/
+/* .flexy-col-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)*/
+/* .flexy-offset-[namespace]-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)*/
+/* .flexy-offset-[namespace]-reset for resetting a col's offset for that and larger namespaces*/
+/**/
+/* Build grid in 2 steps:*/
+/* 1. For each namespace, create grid-base*/
+/* 2. For each namespace, wrap the col width/offset measurements in their breakpoint media query*/
 .l-flexy-col-xs-1 {
+  -ms-flex-preferred-size: 8.33333%;
   flex-basis: 8.33333%;
   max-width: 8.33333%; }
 
 .l-flexy-col-xs-2 {
+  -ms-flex-preferred-size: 16.66667%;
   flex-basis: 16.66667%;
   max-width: 16.66667%; }
 
 .l-flexy-col-xs-3 {
+  -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   max-width: 25%; }
 
 .l-flexy-col-xs-4 {
+  -ms-flex-preferred-size: 33.33333%;
   flex-basis: 33.33333%;
   max-width: 33.33333%; }
 
 .l-flexy-col-xs-5 {
+  -ms-flex-preferred-size: 41.66667%;
   flex-basis: 41.66667%;
   max-width: 41.66667%; }
 
 .l-flexy-col-xs-6 {
+  -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   max-width: 50%; }
 
 .l-flexy-col-xs-7 {
+  -ms-flex-preferred-size: 58.33333%;
   flex-basis: 58.33333%;
   max-width: 58.33333%; }
 
 .l-flexy-col-xs-8 {
+  -ms-flex-preferred-size: 66.66667%;
   flex-basis: 66.66667%;
   max-width: 66.66667%; }
 
 .l-flexy-col-xs-9 {
+  -ms-flex-preferred-size: 75%;
   flex-basis: 75%;
   max-width: 75%; }
 
 .l-flexy-col-xs-10 {
+  -ms-flex-preferred-size: 83.33333%;
   flex-basis: 83.33333%;
   max-width: 83.33333%; }
 
 .l-flexy-col-xs-11 {
+  -ms-flex-preferred-size: 91.66667%;
   flex-basis: 91.66667%;
   max-width: 91.66667%; }
 
 .l-flexy-col-xs-12 {
+  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   max-width: 100%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-1 {
   margin-left: 8.33333%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-2 {
   margin-left: 16.66667%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-3 {
   margin-left: 25%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-4 {
   margin-left: 33.33333%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-5 {
   margin-left: 41.66667%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-6 {
   margin-left: 50%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-7 {
   margin-left: 58.33333%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-8 {
   margin-left: 66.66667%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-9 {
   margin-left: 75%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-10 {
   margin-left: 83.33333%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-11 {
   margin-left: 91.66667%; }
 
+/* do not include the offset class for last column*/
 .l-flexy-offset-xs-reset {
   margin-left: 0; }
 
 @media only screen and (min-width: size) {
   .l-flexy-col-sm-1 {
+    -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
 
   .l-flexy-col-sm-2 {
+    -ms-flex-preferred-size: 16.66667%;
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
 
   .l-flexy-col-sm-3 {
+    -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%; }
 
   .l-flexy-col-sm-4 {
+    -ms-flex-preferred-size: 33.33333%;
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
 
   .l-flexy-col-sm-5 {
+    -ms-flex-preferred-size: 41.66667%;
     flex-basis: 41.66667%;
     max-width: 41.66667%; }
 
   .l-flexy-col-sm-6 {
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%; }
 
   .l-flexy-col-sm-7 {
+    -ms-flex-preferred-size: 58.33333%;
     flex-basis: 58.33333%;
     max-width: 58.33333%; }
 
   .l-flexy-col-sm-8 {
+    -ms-flex-preferred-size: 66.66667%;
     flex-basis: 66.66667%;
     max-width: 66.66667%; }
 
   .l-flexy-col-sm-9 {
+    -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%; }
 
   .l-flexy-col-sm-10 {
+    -ms-flex-preferred-size: 83.33333%;
     flex-basis: 83.33333%;
     max-width: 83.33333%; }
 
   .l-flexy-col-sm-11 {
+    -ms-flex-preferred-size: 91.66667%;
     flex-basis: 91.66667%;
     max-width: 91.66667%; }
 
   .l-flexy-col-sm-12 {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-1 {
     margin-left: 8.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-2 {
     margin-left: 16.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-3 {
     margin-left: 25%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-4 {
     margin-left: 33.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-5 {
     margin-left: 41.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-6 {
     margin-left: 50%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-7 {
     margin-left: 58.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-8 {
     margin-left: 66.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-9 {
     margin-left: 75%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-10 {
     margin-left: 83.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-11 {
     margin-left: 91.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-sm-reset {
     margin-left: 0; } }
 @media only screen and (min-width: size) {
   .l-flexy-col-md-1 {
+    -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
 
   .l-flexy-col-md-2 {
+    -ms-flex-preferred-size: 16.66667%;
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
 
   .l-flexy-col-md-3 {
+    -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%; }
 
   .l-flexy-col-md-4 {
+    -ms-flex-preferred-size: 33.33333%;
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
 
   .l-flexy-col-md-5 {
+    -ms-flex-preferred-size: 41.66667%;
     flex-basis: 41.66667%;
     max-width: 41.66667%; }
 
   .l-flexy-col-md-6 {
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%; }
 
   .l-flexy-col-md-7 {
+    -ms-flex-preferred-size: 58.33333%;
     flex-basis: 58.33333%;
     max-width: 58.33333%; }
 
   .l-flexy-col-md-8 {
+    -ms-flex-preferred-size: 66.66667%;
     flex-basis: 66.66667%;
     max-width: 66.66667%; }
 
   .l-flexy-col-md-9 {
+    -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%; }
 
   .l-flexy-col-md-10 {
+    -ms-flex-preferred-size: 83.33333%;
     flex-basis: 83.33333%;
     max-width: 83.33333%; }
 
   .l-flexy-col-md-11 {
+    -ms-flex-preferred-size: 91.66667%;
     flex-basis: 91.66667%;
     max-width: 91.66667%; }
 
   .l-flexy-col-md-12 {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-1 {
     margin-left: 8.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-2 {
     margin-left: 16.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-3 {
     margin-left: 25%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-4 {
     margin-left: 33.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-5 {
     margin-left: 41.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-6 {
     margin-left: 50%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-7 {
     margin-left: 58.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-8 {
     margin-left: 66.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-9 {
     margin-left: 75%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-10 {
     margin-left: 83.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-11 {
     margin-left: 91.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-md-reset {
     margin-left: 0; } }
 @media only screen and (min-width: size) {
   .l-flexy-col-lg-1 {
+    -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
 
   .l-flexy-col-lg-2 {
+    -ms-flex-preferred-size: 16.66667%;
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
 
   .l-flexy-col-lg-3 {
+    -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%; }
 
   .l-flexy-col-lg-4 {
+    -ms-flex-preferred-size: 33.33333%;
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
 
   .l-flexy-col-lg-5 {
+    -ms-flex-preferred-size: 41.66667%;
     flex-basis: 41.66667%;
     max-width: 41.66667%; }
 
   .l-flexy-col-lg-6 {
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%; }
 
   .l-flexy-col-lg-7 {
+    -ms-flex-preferred-size: 58.33333%;
     flex-basis: 58.33333%;
     max-width: 58.33333%; }
 
   .l-flexy-col-lg-8 {
+    -ms-flex-preferred-size: 66.66667%;
     flex-basis: 66.66667%;
     max-width: 66.66667%; }
 
   .l-flexy-col-lg-9 {
+    -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%; }
 
   .l-flexy-col-lg-10 {
+    -ms-flex-preferred-size: 83.33333%;
     flex-basis: 83.33333%;
     max-width: 83.33333%; }
 
   .l-flexy-col-lg-11 {
+    -ms-flex-preferred-size: 91.66667%;
     flex-basis: 91.66667%;
     max-width: 91.66667%; }
 
   .l-flexy-col-lg-12 {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-1 {
     margin-left: 8.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-2 {
     margin-left: 16.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-3 {
     margin-left: 25%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-4 {
     margin-left: 33.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-5 {
     margin-left: 41.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-6 {
     margin-left: 50%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-7 {
     margin-left: 58.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-8 {
     margin-left: 66.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-9 {
     margin-left: 75%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-10 {
     margin-left: 83.33333%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-11 {
     margin-left: 91.66667%; }
 
+  /* do not include the offset class for last column*/
   .l-flexy-offset-lg-reset {
     margin-left: 0; } }
 /**
@@ -981,16 +1120,16 @@ body {
     width: 25px;
     border-radius: 2px 2px 0 0; }
     .c-bar-graph__bar--skill-1 {
-      height: 75%;
+      height: 240px;
       background-color: #3a9ac4; }
     .c-bar-graph__bar--skill-2 {
-      height: 65%;
+      height: 208px;
       background-color: #ebf8fe; }
     .c-bar-graph__bar--skill-3 {
-      height: 35%;
+      height: 112px;
       background-color: #b3e3f8; }
     .c-bar-graph__bar--skill-4 {
-      height: 10%;
+      height: 32px;
       background-color: #d8d8d8; }
 
 .c-slider__container {
