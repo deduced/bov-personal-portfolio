@@ -59,21 +59,10 @@
             transform: rotate(55deg);
     font-size: 13px;
 
-    &--skill-1 {
-      bottom: -48px;
-    }
-
-    &--skill-2 {
-      bottom: -48px;
-    }
-
-    &--skill-3 {
-      bottom: -40px;
-    }
-
-    &--skill-4 {
-      bottom: -42px;
-    }
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    bottom: -22px;
+    left: 15px;
   }
 
   &__bar {
@@ -82,25 +71,25 @@
 
 
     &--skill-1 {
-      // height: 75%;
+      /* height: 75%;*/
       height: 240px;
       background-color: rgb(58, 154, 196);
     }
 
     &--skill-2 {
-      // height: 65%;
+      /* height: 65%;*/
       height: 208px;
       background-color: rgb(235, 248, 254);
     }
 
     &--skill-3 {
-      // height: 35%;
+      /* height: 35%;*/
       height: 112px;
       background-color: rgb(179, 227, 248);
     }
 
     &--skill-4 {
-      // height: 10%;
+      /* height: 10%;*/
       height: 32px;
       background-color: rgb(216, 216, 216);
     }

@@ -1107,28 +1107,28 @@ body {
     display: inline-block;
     -webkit-transform: rotate(55deg);
     transform: rotate(55deg);
-    font-size: 13px; }
-    .c-bar-graph__xlabel--skill-1 {
-      bottom: -48px; }
-    .c-bar-graph__xlabel--skill-2 {
-      bottom: -48px; }
-    .c-bar-graph__xlabel--skill-3 {
-      bottom: -40px; }
-    .c-bar-graph__xlabel--skill-4 {
-      bottom: -42px; }
+    font-size: 13px;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    bottom: -22px;
+    left: 15px; }
   .c-bar-graph__bar {
     width: 25px;
     border-radius: 2px 2px 0 0; }
     .c-bar-graph__bar--skill-1 {
+      /* height: 75%;*/
       height: 240px;
       background-color: #3a9ac4; }
     .c-bar-graph__bar--skill-2 {
+      /* height: 65%;*/
       height: 208px;
       background-color: #ebf8fe; }
     .c-bar-graph__bar--skill-3 {
+      /* height: 35%;*/
       height: 112px;
       background-color: #b3e3f8; }
     .c-bar-graph__bar--skill-4 {
+      /* height: 10%;*/
       height: 32px;
       background-color: #d8d8d8; }
 
