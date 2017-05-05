@@ -69,28 +69,39 @@
     width: 25px;
     border-radius: 2px 2px 0 0;
 
+    &--expert {
+
+    }
+
+    &--proficient-high {
+      height: 240px;
+    }
+
+    &--proficient {
+      height: 208px;
+    }
+
+    &--competent {
+      height: 112px;
+    }
+
+    &--learning {
+      height: 32px;
+    }
 
     &--skill-1 {
-      /* height: 75%;*/
-      height: 240px;
       background-color: rgb(58, 154, 196);
     }
 
     &--skill-2 {
-      /* height: 65%;*/
-      height: 208px;
       background-color: rgb(235, 248, 254);
     }
 
     &--skill-3 {
-      /* height: 35%;*/
-      height: 112px;
       background-color: rgb(179, 227, 248);
     }
 
     &--skill-4 {
-      /* height: 10%;*/
-      height: 32px;
       background-color: rgb(216, 216, 216);
     }
   }

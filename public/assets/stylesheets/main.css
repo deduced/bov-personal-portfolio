@@ -1115,21 +1115,21 @@ body {
   .c-bar-graph__bar {
     width: 25px;
     border-radius: 2px 2px 0 0; }
+    .c-bar-graph__bar--proficient-high {
+      height: 240px; }
+    .c-bar-graph__bar--proficient {
+      height: 208px; }
+    .c-bar-graph__bar--competent {
+      height: 112px; }
+    .c-bar-graph__bar--learning {
+      height: 32px; }
     .c-bar-graph__bar--skill-1 {
-      /* height: 75%;*/
-      height: 240px;
       background-color: #3a9ac4; }
     .c-bar-graph__bar--skill-2 {
-      /* height: 65%;*/
-      height: 208px;
       background-color: #ebf8fe; }
     .c-bar-graph__bar--skill-3 {
-      /* height: 35%;*/
-      height: 112px;
       background-color: #b3e3f8; }
     .c-bar-graph__bar--skill-4 {
-      /* height: 10%;*/
-      height: 32px;
       background-color: #d8d8d8; }
 
 .c-slider__container {
