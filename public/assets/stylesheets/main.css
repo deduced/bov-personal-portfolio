@@ -1315,7 +1315,8 @@ body {
     text-transform: none;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    width: 160px; }
+    width: 160px;
+    z-index: 10; }
   .c-tooltip-toggle::before, .c-tooltip-toggle::after {
     color: #000000;
     font-family: monospace;
