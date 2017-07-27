@@ -1,0 +1,19 @@
+{
+  "name": "bov-personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio for Charlie Astrada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deduced/bov-personal-portfolio.git"
+  },
+  "author": "Charlie Astrada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deduced/bov-personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/deduced/bov-personal-portfolio#readme"
+}
