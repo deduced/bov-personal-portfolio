@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/deduced/bov-personal-portfolio/issues"
   },
-  "homepage": "https://github.com/deduced/bov-personal-portfolio#readme"
+  "homepage": "https://github.com/deduced/bov-personal-portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
