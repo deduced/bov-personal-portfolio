@@ -31,10 +31,13 @@ gulp.task('clean:public', function() {
 });
 
 
-
-//concat and minify JS files
 gulp.task('concatAndMinifyJs', function() {
-  gulp.src('src/assets/js/*.js')
+  gulp.src(['src/assets/js/jquery.js',
+            'src/assets/js/jquery.easing.min.js',
+            'src/assets/js/scrolling-nav.js',
+            'src/assets/js/back-to-top.js',
+            'src/assets/js/overlay.js',
+            'src/assets/js/slider.js'])
       .pipe(concat('main.min.js'))
       .pipe(uglify())
       .on('error', handleError)
@@ -59,3 +62,6 @@ gulp.task('imageMin', function() {
                 .on('error', handleError)
                 .pipe(gulp.dest('public/assets/images'));
 });
+
+
+gulp.task('build', ['imageMin', 'sass', 'concatAndMinifyJs']);
