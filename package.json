@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/deduced/bov-personal-portfolio#readme",
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }
