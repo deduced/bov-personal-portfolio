@@ -8,7 +8,7 @@ var sass = require('gulp-sass'); //compile .scss files; used in sass task
 var cleanCSS = require('gulp-clean-css'); //to minify css files; used in sass task
 var concat = require('gulp-concat'); //concat files; used in concatAndMinifyJs task
 var uglify = require('gulp-uglify'); //minify js; used in concatAndMinifyJs task
-
+var imagemin = require('gulp-imagemin'); // optimize image files; used in imageMin task
 
 
 
@@ -49,4 +49,13 @@ gulp.task('sass', function() {
       .pipe(cleanCSS())
       .on('error', handleError)
       .pipe(gulp.dest('public/assets/stylesheets/'));
+});
+
+
+//Optimize images
+gulp.task('imageMin', function() {
+    return gulp.src('src/assets/images/*')
+                .pipe(imagemin())
+                .on('error', handleError)
+                .pipe(gulp.dest('public/assets/images'));
 });
