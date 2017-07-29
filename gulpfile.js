@@ -11,6 +11,8 @@ var uglify = require('gulp-uglify'); //minify js; used in concatAndMinifyJs task
 var imagemin = require('gulp-imagemin'); // optimize image files; used in imageMin task
 var jshint = require('gulp-jshint'); //Lint js files; used in lintJs task
 var bump = require('gulp-bump'); //Version plugin; used in bumpPackage task
+var runSequence = require('run-sequence'); //run tasks in sequence; used in deploy task
+
 
 //******* User Variables and Functions **********//
 function handleError (err) {
