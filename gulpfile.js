@@ -15,7 +15,7 @@ var runSequence = require('run-sequence'); //run tasks in sequence; used in depl
 var git = require('gulp-git'); //run git relatd tasks; used in deploy task.
 
 //******* User Variables and Functions **********//
-var gitMessage = "Add gulp tasks for deployment which include the build and git add, commit, and push gulp tasks through runSequence.";
+var gitMessage = "Fix issue with jquery easing plugin. concatAndMinifyJs task had reference to old minified filename. ";
 
 function handleError (err) {
   console.log(err.toString());
@@ -33,7 +33,7 @@ gulp.task('clean:public', function() {
 
 gulp.task('concatAndMinifyJs', function() {
   gulp.src(['src/assets/js/jquery.js',
-            'src/assets/js/jquery.easing.min.js',
+            'src/assets/js/jquery.easing.js',
             'src/assets/js/scrolling-nav.js',
             'src/assets/js/back-to-top.js',
             'src/assets/js/overlay.js',
