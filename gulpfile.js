@@ -15,7 +15,7 @@ var runSequence = require('run-sequence'); //run tasks in sequence; used in depl
 var git = require('gulp-git'); //run git relatd tasks; used in deploy task.
 
 //******* User Variables and Functions **********//
-var gitMessage = "Add gulp-git plugin and add, commit and push gulp tasks."
+var gitMessage = "";
 
 function handleError (err) {
   console.log(err.toString());
