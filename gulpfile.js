@@ -9,8 +9,8 @@ var cleanCSS = require('gulp-clean-css'); //to minify css files; used in sass ta
 var concat = require('gulp-concat'); //concat files; used in concatAndMinifyJs task
 var uglify = require('gulp-uglify'); //minify js; used in concatAndMinifyJs task
 var imagemin = require('gulp-imagemin'); // optimize image files; used in imageMin task
-var jshint = require('gulp-jshint'); //Lint js files; used in lintJs
-
+var jshint = require('gulp-jshint'); //Lint js files; used in lintJs task
+var bump = require('gulp-bump'); //Version plugin; used in bumpPackage task
 
 //******* User Variables and Functions **********//
 function handleError (err) {
@@ -76,4 +76,17 @@ gulp.task('lintJs', function() {
 });
 
 
+
+//Bump version of package.json -- defaults to patch
+gulp.task('bumpPackage', function() {
+  gulp.src('package.json')
+      .pipe(bump())
+      .on('error', handleError)
+      .pipe(gulp.dest('./'));
+});
+
+
 gulp.task('build', ['lintJs', 'imageMin', 'sass', 'concatAndMinifyJs']);
+
+
+//@todo - add a deploy task that will build and then bump version automatically
