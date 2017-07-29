@@ -1,6 +1,6 @@
 {
   "name": "bov-personal-portfolio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Personal portfolio for Charlie Astrada",
   "main": "index.js",
   "scripts": {

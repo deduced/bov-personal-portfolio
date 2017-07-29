@@ -15,7 +15,7 @@ var runSequence = require('run-sequence'); //run tasks in sequence; used in depl
 var git = require('gulp-git'); //run git relatd tasks; used in deploy task.
 
 //******* User Variables and Functions **********//
-var gitMessage = "Fix issue with jquery easing plugin. concatAndMinifyJs task had reference to old minified filename. ";
+var gitMessage = "Add version bump task, bumpPackage,  to 'gulp deploy'. ";
 
 function handleError (err) {
   console.log(err.toString());
@@ -110,5 +110,5 @@ gulp.task('push', function(){
 gulp.task('build', ['lintJs', 'imageMin', 'sass', 'concatAndMinifyJs']);
 
 gulp.task('deploy', function(callback) {
-  runSequence('build', 'add', 'commit', 'push', callback);
+  runSequence('build', 'bumpPackage', 'add', 'commit', 'push', callback);
 });
