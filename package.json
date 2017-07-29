@@ -22,8 +22,10 @@
     "gulp-clean-css": "^3.7.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.3.0",
+    "gulp-jshint": "^2.0.4",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
   },
   "dependencies": {
     "jquery": "^3.2.1"
