@@ -15,16 +15,12 @@ var runSequence = require('run-sequence'); //run tasks in sequence; used in depl
 var git = require('gulp-git'); //run git relatd tasks; used in deploy task.
 
 //******* User Variables and Functions **********//
-var gitMessage = "";
+var gitMessage = "Add gulp tasks for deployment which include the build and git add, commit, and push gulp tasks through runSequence.";
 
 function handleError (err) {
   console.log(err.toString());
   process.exit(-1);
 }
-
-
-
-
 
 
 //************* Gulp Tasks *************//
@@ -93,13 +89,13 @@ gulp.task('bumpPackage', function() {
 //*********Git Tasks************//
 //git add all files in source
 gulp.task('add', function(){
-  return gulp.src('./*')
+  return gulp.src('.')
     .pipe(git.add());
 });
 
 //git commit
 gulp.task('commit', function(){
-  return gulp.src('./*')
+  return gulp.src('.')
     .pipe(git.commit(gitMessage));
 });
 
@@ -110,8 +106,9 @@ gulp.task('push', function(){
   });
 });
 
-
+//********* Build and Deploy Tasks ************//
 gulp.task('build', ['lintJs', 'imageMin', 'sass', 'concatAndMinifyJs']);
 
-
-//@todo - add a deploy task that will build and then bump version automatically
+gulp.task('deploy', function(callback) {
+  runSequence('build', 'add', 'commit', 'push', callback);
+});
