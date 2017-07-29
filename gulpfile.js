@@ -12,9 +12,11 @@ var imagemin = require('gulp-imagemin'); // optimize image files; used in imageM
 var jshint = require('gulp-jshint'); //Lint js files; used in lintJs task
 var bump = require('gulp-bump'); //Version plugin; used in bumpPackage task
 var runSequence = require('run-sequence'); //run tasks in sequence; used in deploy task
-
+var git = require('gulp-git'); //run git relatd tasks; used in deploy task.
 
 //******* User Variables and Functions **********//
+var gitMessage = "Add gulp-git plugin and add, commit and push gulp tasks."
+
 function handleError (err) {
   console.log(err.toString());
   process.exit(-1);
@@ -85,6 +87,27 @@ gulp.task('bumpPackage', function() {
       .pipe(bump())
       .on('error', handleError)
       .pipe(gulp.dest('./'));
+});
+
+
+//*********Git Tasks************//
+//git add all files in source
+gulp.task('add', function(){
+  return gulp.src('./*')
+    .pipe(git.add());
+});
+
+//git commit
+gulp.task('commit', function(){
+  return gulp.src('./*')
+    .pipe(git.commit(gitMessage));
+});
+
+//git push
+gulp.task('push', function(){
+  git.push('origin', 'master', function (err) {
+    if (err) throw err;
+  });
 });
 
 
