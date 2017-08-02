@@ -106,9 +106,15 @@ gulp.task('push', function(){
   });
 });
 
-//********* Build and Deploy Tasks ************//
+//********* Build,  Deploy, and Watch Tasks ************//
 gulp.task('build', ['lintJs', 'imageMin', 'sass', 'concatAndMinifyJs']);
 
 gulp.task('deploy', function(callback) {
   runSequence('build', 'bumpPackage', 'add', 'commit', 'push', callback);
+});
+
+gulp.task('watch', function() {
+  gulp.watch('src/stylesheets/**/*.scss', ['sass']);
+
+  gulp.watch('src/assets/js/*.js', ['lintJs', 'concatAndMinifyJs']);
 });
