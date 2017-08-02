@@ -13,6 +13,7 @@ var jshint = require('gulp-jshint'); //Lint js files; used in lintJs task
 var bump = require('gulp-bump'); //Version plugin; used in bumpPackage task
 var runSequence = require('run-sequence'); //run tasks in sequence; used in deploy task
 var git = require('gulp-git'); //run git relatd tasks; used in deploy task.
+var browserSync = require('browser-sync').create(); //browserSync for change watching; used in watch task. 
 
 //******* User Variables and Functions **********//
 var gitMessage = "Add version bump task, bumpPackage,  to 'gulp deploy'. ";
