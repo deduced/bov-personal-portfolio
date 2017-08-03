@@ -13,7 +13,7 @@ var jshint = require('gulp-jshint'); //Lint js files; used in lintJs task
 var bump = require('gulp-bump'); //Version plugin; used in bumpPackage task
 var runSequence = require('run-sequence'); //run tasks in sequence; used in deploy task
 var git = require('gulp-git'); //run git relatd tasks; used in deploy task.
-var browserSync = require('browser-sync').create(); //browserSync for change watching; used in watch task. 
+var browserSync = require('browser-sync').create(); //browserSync for change watching; used in watch task.
 
 //******* User Variables and Functions **********//
 var gitMessage = "Add version bump task, bumpPackage,  to 'gulp deploy'. ";
@@ -42,7 +42,10 @@ gulp.task('concatAndMinifyJs', function() {
       .pipe(concat('main.min.js'))
       .pipe(uglify())
       .on('error', handleError)
-      .pipe(gulp.dest('./public/assets/js/'));
+      .pipe(gulp.dest('./public/assets/js/'))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
 });
 
 
@@ -52,7 +55,10 @@ gulp.task('sass', function() {
       .pipe(sass().on('error', sass.logError))
       .pipe(cleanCSS())
       .on('error', handleError)
-      .pipe(gulp.dest('public/assets/stylesheets/'));
+      .pipe(gulp.dest('public/assets/stylesheets/'))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
 });
 
 
@@ -114,7 +120,15 @@ gulp.task('deploy', function(callback) {
   runSequence('build', 'bumpPackage', 'add', 'commit', 'push', callback);
 });
 
-gulp.task('watch', function() {
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: '.'
+    }
+  });
+});
+
+gulp.task('watch', ['browserSync'], function() {
   gulp.watch('src/stylesheets/**/*.scss', ['sass']);
 
   gulp.watch('src/assets/js/*.js', ['lintJs', 'concatAndMinifyJs']);
