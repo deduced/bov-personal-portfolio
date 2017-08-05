@@ -39,15 +39,15 @@
     &__closebtn {
       color: #ffffff;
       position: absolute;
-      top: 20px;
+      top: 3px;
       left: 25px;
       font-size: 6vh;
     }
 
     &__openbtn {
-      position: absolute;
-      top: 20px;
-      left: 10px;
+      position: relative;
+      top: 10px;
+      left: 22px;
       font-size: 2rem;
 
       @include media(tablet) {
