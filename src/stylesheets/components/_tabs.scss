@@ -3,16 +3,16 @@
   max-width: 900px;
 
   &--state {
-    visibility: hidden;
-    position: absolute;
     left: -10000px;
+    position: absolute;
+    visibility: hidden;
   }
 
   &__labels-container {
-    list-style: none;
     color: black;
     display: none;
     height: 100%;
+    list-style: none;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -29,9 +29,9 @@
   }
 
   &__label {
-    padding: 15px;
-    margin: 20px 0;
     font-size: 18px;
+    margin: 20px 0;
+    padding: 15px;
 
     &:hover {
       background: $highlight-color;
