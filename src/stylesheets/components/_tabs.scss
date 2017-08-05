@@ -34,9 +34,10 @@
     padding: 15px;
 
     &:hover {
-      background: $highlight-color;
+      background-color: $highlight-color;
       cursor: pointer;
     }
+
   }
 
   &__content {
@@ -65,6 +66,15 @@
       display: inline-block;
     }
   }
+}
+
+#calculator:checked ~ .c-tabs__labels .c-tabs__labels-container #tab-calculator > li,
+#product-listing:checked ~ .c-tabs__labels .c-tabs__labels-container #tab-product-listing > li,
+#various-forms:checked ~ .c-tabs__labels .c-tabs__labels-container #tab-various-forms > li,
+#same-page-form:checked ~ .c-tabs__labels .c-tabs__labels-container #tab-same-page-form > li,
+#flexy-grid:checked ~ .c-tabs__labels .c-tabs__labels-container #tab-flexy-grid > li,
+#ui-framework:checked ~ .c-tabs__labels .c-tabs__labels-container #tab-ui-framework > li {
+  background-color: $highlight-color;
 }
 
 
