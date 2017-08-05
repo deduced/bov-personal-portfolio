@@ -5,3 +5,7 @@
 .h-light {
   color: $text-color-light;
 }
+
+.is-underlined-dotted {
+  border-bottom: 1px dotted $brand-color;
+}
