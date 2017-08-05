@@ -16,9 +16,9 @@
     <header id="header">
       <div class="header__container">
         <nav id="nav-primary">
+          <!-- MOBILE MENU -->
           <div id="mobile-nav" class="c-overlay l-nav-primary-mobile">
             <a href="javascript:void(0)" class="c-overlay__closebtn" onclick="closeNav()">&times;</a>
-
             <div class="c-overlay__content">
               <a href="#about" class="c-overlay__item-inner page-scroll" onclick="closeNav()">About</a>
               <a href="#work" class="c-overlay__item-inner page-scroll" onclick="closeNav()">Work</a>
@@ -32,6 +32,7 @@
             </div>
           </div>
 
+          <!-- DESKTOP MENU -->
           <div class="l-nav-primary-desktop">
             <div class="l-nav-primary-desktop__menu">
               <ul class="l-nav-primary-desktop__menu-container">
@@ -48,9 +49,12 @@
       </div>
       <span onclick="openNav()" class="c-overlay__openbtn"><i class="fa fa-bars" aria-hidden="true"></i></span>
     </header>
+
+    <!-- MAIN SECTION  -->
     <main id="main">
       <a href="#" class="c-back-to-top"><i class="fa fa-2x fa-chevron-circle-up" aria-hidden="true"></i></a>
 
+      <!-- ABOUT SECTION -->
       <section id="about" class="t-section l-section c-hero l-section--hero">
         <h1 class="c-hero__header">Charlie Astrada</h1>
         <article class="l-article l-article--hero">
@@ -68,6 +72,7 @@
 
       </section>
 
+      <!-- WORK SECTION -->
       <section id="work" class="t-section--alt l-section">
         <h2 class="t-section__header--alt l-section__header">Select Works</h2>
 
@@ -79,6 +84,7 @@
           <input class="c-tabs--state" type="radio" name="grp-work" id="flexy-grid">
           <input class="c-tabs--state" type="radio" name="grp-work" id="ui-framework">
 
+          <!-- WORKS: Tabs -->
           <div class="c-tabs__labels">
             <ul class="c-tabs__labels-container">
               <label for="calculator" id="tab-calculator"><li class="c-tabs__label">Calculator</li></label>
@@ -90,6 +96,7 @@
             </ul>
           </div>
 
+          <!-- SELECT WORKS: Calculator -->
           <div class="c-tabs__content">
             <article id="c-tab__calc" class="l-article l-article--showcase u-centered">
               <h3 class="t-article__header--showcase t-article__header--alt">Calculator</h3>
@@ -126,6 +133,7 @@
             </div>
             </article>
 
+            <!-- SELECT WORKS: Product Listing Page -->
             <article id="c-tab__prod-listing" class="l-article l-article--showcase u-centered">
               <h3 class="t-article__header--showcase t-article__header--alt">Product Listing Page</h3>
               <div class="c-slider">
@@ -162,6 +170,7 @@
               </div>
             </article>
 
+            <!-- SELECT WORKS: Various Forms -->
             <article id="c-tab__various-forms" class="l-article l-article--showcase u-centered">
               <h3 class="t-article__header--showcase t-article__header--alt">Various Forms</h3>
 
@@ -198,6 +207,7 @@
               </div>
             </article>
 
+            <!-- SELECT WORKS: Same-page Form -->
             <article id="c-tab__same-page-form" class="l-article l-article--showcase u-centered">
               <h3 class="t-article__header--showcase t-article__header--alt">Same-page Form</h3>
 
@@ -232,6 +242,7 @@
               </div>
             </article>
 
+            <!-- SELECT WORKS: Flexy Flexbox Grid -->
             <article id="c-tab__flexy-grid" class="l-article l-article--showcase u-centered">
               <h3 class="t-article__header--showcase t-article__header--alt">Flexy Flexbox Grid</h3>
               <img src="public/assets/images/flexy-grid-image.png" alt="Flexy Flexbox Grid Screenshot">
@@ -251,6 +262,7 @@
               </div>
             </article>
 
+            <!-- SELECT WORKS: UI Framework -->
             <article id="c-tab__ui-framework" class="l-article l-article--showcase u-centered">
               <h3 class="t-article__header--showcase t-article__header--alt">UI Framework</h3>
 
@@ -292,6 +304,7 @@
 
       </section>
 
+      <!-- SKILLS SECTION -->
       <section id="skills" class="t-section l-section">
         <h2 class="l-section__header">Skills</h2>
         <div class="c-meter">
@@ -303,6 +316,7 @@
           </div>
         </div>
 
+        <!-- SKILLS: Frontend Skills -->
         <div class="l-flexy-row l-article__wrapper--skills u-space-around">
           <article class="l-article l-article--skills">
             <div class="c-bar-graph">
@@ -333,6 +347,7 @@
             </div>
           </article>
 
+          <!-- SKILLS: Backend Skills -->
           <article class="l-article l-article--skills">
             <div class="c-bar-graph">
               <h3 class="c-bar-graph__title--backend">Backend Skills</h3>
@@ -362,6 +377,7 @@
             </div>
           </article>
 
+          <!-- SKILLS: Other Skills -->
           <article class="l-article l-article--skills">
             <div class="c-bar-graph">
               <h3 class="c-bar-graph__title--other">Other Skills</h3>
@@ -394,6 +410,7 @@
 
       </section>
 
+      <!-- GET IN TOUCH SECTION -->
       <section id="get-in-touch" class="t-section--highlight l-section--highlight u-centered">
         <h2 class="t-section__header--highlight l-section__header l-section__header--highlight">Let's Work Together</h2>
         <div>
