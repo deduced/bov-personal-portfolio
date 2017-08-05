@@ -32,6 +32,11 @@
     padding: 15px;
     margin: 20px 0;
     font-size: 18px;
+
+    &:hover {
+      background: $highlight-color;
+      cursor: pointer;
+    }
   }
 
   &__content {
