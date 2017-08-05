@@ -6,16 +6,16 @@
 	        animation: bounce 1s infinite;
 
 
-	// @at-root {
-	// 	@-webkit-keyframes bounce {
-	// 		 0% { bottom: 35%; }
-	// 		 50%   { bottom: 40%; }
-	// 		 100% { bottom: 35%; }
-	// 	}
-	// 	@keyframes bounce {
-	// 		 0% { bottom: 35%; }
-	// 		 50%   { bottom: 40%; }
-	// 		 100% { bottom: 35%; }
-	// 	}
-	// }
+	@at-root {
+		@-webkit-keyframes bounce {
+			 0% { bottom: 5%; }
+			 50%   { bottom: 10%; }
+			 100% { bottom: 5%; }
+		}
+		@keyframes bounce {
+			 0% { bottom: 5%; }
+			 50%   { bottom: 10%; }
+			 100% { bottom: 5%; }
+		}
+	}
 }
