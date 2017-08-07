@@ -59,3 +59,13 @@
 .fa-works {
   padding: 10px 0 10px 10px;
 }
+
+.fa-bars {
+  color: $text-color-light;
+  padding: 0 0 10px 0;
+
+  &:hover {
+    cursor: pointer;
+    color: $text-color-dark;
+  }
+}
