@@ -36,3 +36,14 @@ a {
     background-color: $highlight-color;
   }
 }
+
+button {
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    background-color: $highlight-color;
+    color: $text-color-dark;
+    cursor: pointer;
+  }
+}
