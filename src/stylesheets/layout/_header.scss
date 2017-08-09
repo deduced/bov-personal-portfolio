@@ -47,3 +47,21 @@
     display: block;
   }
 }
+
+
+/* -------- FONT AWESOME --------- */
+// The following classes pertain to fontawesome icons
+
+.fa-mobile-menu {
+  padding: 0;
+}
+
+.fa-bars {
+  color: $text-color-light;
+  padding: 0 0 10px 0;
+
+  &:hover {
+    cursor: pointer;
+    color: $text-color-dark;
+  }
+}
