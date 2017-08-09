@@ -2,8 +2,7 @@
 /* This file contains all styles related to the footer of the site/application.*/
 /* -----------------------------------------------------------------------------*/
 
-.fa {
-  @include media(tablet) {
-    font-size: 2em !important;
-  }
+
+.fa-contact {
+  padding: 10px;
 }
