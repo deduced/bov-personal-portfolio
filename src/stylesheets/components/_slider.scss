@@ -11,6 +11,10 @@
     -webkit-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 
+    &-image {
+      overflow: hidden; 
+    }
+
     &--active {
       position: static;
       display: inline-block;
