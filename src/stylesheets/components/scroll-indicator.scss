@@ -1,7 +1,6 @@
 .c-scroll-indicator {
-	position: absolute;
+	@include centerer(true, false); //mixins.scss 
 	padding: 20px;
-	left: 50%;
 	bottom: 8%;
 	-webkit-animation: bounce 1s infinite;
 	        animation: bounce 1s infinite;
