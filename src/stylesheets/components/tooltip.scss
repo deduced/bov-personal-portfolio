@@ -2,21 +2,23 @@
   cursor: pointer;
   position: relative;
 
+
   /*Tooltip text container*/
   &::before {
     position: absolute;
     top: -40px;
-    left: -40px;
+    left: -100px;
     background-color: #ebf8fe;
     border-radius: 5px;
     color: #000000;
     content: attr(aria-label);
-    padding: 1rem;
+    padding: .5rem;
     text-transform: none;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    width: 160px;
+    width: 140px;
     z-index: 10;
+
   }
 
 

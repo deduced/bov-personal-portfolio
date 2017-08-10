@@ -1,7 +1,7 @@
 
 .c-bar-graph {
 
-  min-width: 332px;
+  min-width: 270px;
 
   &__container {
   @extend .l-flexy-row;
@@ -39,7 +39,7 @@
   &__container--bars {
     @extend .l-flexy-row;
     position: relative;
-    width: 70%;
+    width: 50%;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
