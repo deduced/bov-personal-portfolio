@@ -1,80 +1,21 @@
-//@TODO -- use a loop
 
 $(document).ready(function() {
 
-  //set first slider button/item to active
+  //grab slider components to minimize dom calls
+  var $sliders = $(".c-slider");
 
-  $('#slider-1 .c-slider__bullet').first().addClass('c-slider__bullet--active');
-  $('#slider-1 .c-slider__item').first().addClass('c-slider__item--active');
+  //loop through to set active for item/bullet on click
+  $sliders.each(function(index) {
+    var $sliderBullets = $(this).find(".c-slider__bullet");
+    var $sliderItems = $(this).find(".c-slider__item");
 
-  //slider 1 click function
-  $('#slider-1 .c-slider__bullet').click( function(){
-    var $this = $(this);
-    var $siblings = $this.parent().children();
-    var position = $siblings.index($this);
+    $sliderBullets.on('click', function() {
 
-    $('#slider-1 .c-slider__item').removeClass('c-slider__item--active').eq(position).addClass('c-slider__item--active');
-    $('#slider-1 .c-slider__bullet').removeClass('c-slider__bullet--active').eq(position).addClass('c-slider__bullet--active');
+      var $siblings = $(this).parent().children();
+      var position = $siblings.index($(this));
+
+      $sliderBullets.removeClass("c-slider__bullet--active").eq(position).addClass("c-slider__bullet--active");
+      $sliderItems.removeClass("c-slider__item--active").eq(position).addClass("c-slider__item--active");
+    });
   });
-
-  //set second slider button/item to active
-
-  $('#slider-2 .c-slider__bullet').first().addClass('c-slider__bullet--active');
-  $('#slider-2 .c-slider__item').first().addClass('c-slider__item--active');
-
-  //slider 2 click function
-  $('#slider-2 .c-slider__bullet').click( function(){
-    var $this = $(this);
-    var $siblings = $this.parent().children();
-    var position = $siblings.index($this);
-
-    $('#slider-2 .c-slider__item').removeClass('c-slider__item--active').eq(position).addClass('c-slider__item--active');
-    $('#slider-2 .c-slider__bullet').removeClass('c-slider__bullet--active').eq(position).addClass('c-slider__bullet--active');
-  });
-
-  //set 3rd slider button/item to active
-
-  $('#slider-3 .c-slider__bullet').first().addClass('c-slider__bullet--active');
-  $('#slider-3 .c-slider__item').first().addClass('c-slider__item--active');
-
-  //slider 3 click function
-  $('#slider-3 .c-slider__bullet').click( function(){
-    var $this = $(this);
-    var $siblings = $this.parent().children();
-    var position = $siblings.index($this);
-
-    $('#slider-3 .c-slider__item').removeClass('c-slider__item--active').eq(position).addClass('c-slider__item--active');
-    $('#slider-3 .c-slider__bullet').removeClass('c-slider__bullet--active').eq(position).addClass('c-slider__bullet--active');
-  });
-
-  //set 4th slider button/item to active
-
-  $('#slider-4 .c-slider__bullet').first().addClass('c-slider__bullet--active');
-  $('#slider-2 .c-slider__item').first().addClass('c-slider__item--active');
-
-  //slider 4 click function
-  $('#slider-4 .c-slider__bullet').click( function(){
-    var $this = $(this);
-    var $siblings = $this.parent().children();
-    var position = $siblings.index($this);
-
-    $('#slider-4 .c-slider__item').removeClass('c-slider__item--active').eq(position).addClass('c-slider__item--active');
-    $('#slider-4 .c-slider__bullet').removeClass('c-slider__bullet--active').eq(position).addClass('c-slider__bullet--active');
-  });
-
-  //set 5th slider button/item to active
-
-  $('#slider-6 .c-slider__bullet').first().addClass('c-slider__bullet--active');
-  $('#slider-2 .c-slider__item').first().addClass('c-slider__item--active');
-
-  //slider 5 click function
-  $('#slider-6 .c-slider__bullet').click( function(){
-    var $this = $(this);
-    var $siblings = $this.parent().children();
-    var position = $siblings.index($this);
-
-    $('#slider-6 .c-slider__item').removeClass('c-slider__item--active').eq(position).addClass('c-slider__item--active');
-    $('#slider-6 .c-slider__bullet').removeClass('c-slider__bullet--active').eq(position).addClass('c-slider__bullet--active');
-  });
-
 });
