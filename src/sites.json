@@ -1,0 +1,113 @@
+{
+  "about": {
+    "sectionTitle": "About",
+    "fullName": "Charlie Astrada",
+    "bioIntro": "Up-and-Coming Fullstack Engineer. I write code and analyze data. Mildly successful entrepreneur. I grew up in Washington, DC. I live in Buenos Aires. Life is good."
+  },
+  "work": {
+    "sectionTitle": "Select Works",
+    "selectWorks": {
+      "calculator": {
+        "description": "This is a simple, responsive calculator built with HTML, CSS, and Vanilla JavaScript.",
+        "demoURL": "https://deduced.github.io/moderndev-calculator/calculator.html",
+        "sourceURL": "https://github.com/deduced/moderndev-calculator",
+        "technologyUsed": ["html5", "css3", "vanilla javascript"]
+      },
+      "product listing page": {
+        "description": "A very simple product listing page loosely inspired by Amazon.com.",
+        "demoURL": "https://deduced.github.io/moderndev-product-listing-page/product-listing-page.html",
+        "sourceURL": "https://github.com/deduced/moderndev-product-listing-page",
+        "technologyUsed": ["html5", "css3", "vanilla javascript"]
+      },
+      "various forms": {
+        "description": "A variety of simple forms using html and css. This was a very early project.",
+        "demoURL": "https://deduced.github.io/moderndev-forms-inputs/",
+        "sourceURL": "https://github.com/deduced/moderndev-forms-inputs",
+        "technologyUsed": ["html5", "css3"]
+      },
+      "same-page form": {
+        "description": "An animated multi-step form that allows you to capture user information from the same page, without any redirection.",
+        "demoURL": "https://snagy22000.github.io/LMD-UI-Framework/#samepageform",
+        "sourceURL": "https://github.com/snagy22000/LMD-UI-Framework/blob/gh-pages/src/styles/css/animated-form.css",
+        "technologyUsed": ["html5", "css3", "vanilla javascript"]
+      },
+      "flexy flexbox grid": {
+        "description": "A simple flexbox-based grid system. This site was built using it.",
+        "demoURL": "https://github.com/deduced/flexy-flexbox-grid-boilerplate",
+        "sourceURL": "https://deduced.github.io/bov-personal-portfolio/",
+        "technologyUsed": ["html5", "css3", "vanilla javascript"]
+      },
+      "ui framework": {
+        "description": "A UI Framework built for a hackathon over a weekend with another teammate.",
+        "demoURL": "https://snagy22000.github.io/LMD-UI-Framework/",
+        "sourceURL": "https://github.com/snagy22000/LMD-UI-Framework",
+        "technologyUsed": ["html5", "css3", "vanilla javascript"]
+      }
+    }
+  },
+  "skills": {
+    "frontend skills": {
+      "percent": 75,
+      "html/css": {
+        "level": "proficient",
+        "toolTip": "3-years experience"
+      },
+      "javascript": {
+        "level": "competent",
+        "toolTip": "2-years experience"
+      },
+      "jQuery": {
+        "level": "competent",
+        "toolTip": "3-months experience"
+      },
+      "reactJS": {
+        "level": "learning",
+        "toolTip": "1-month experience"
+      }
+    },
+    "backend skills": {
+      "percent": 25,
+      "mysql": {
+        "level": "proficient",
+        "toolTip": "5-years experience"
+      },
+      "ruby": {
+        "level": "competent",
+        "toolTip": "2-years experience on and off"
+      },
+      "node js": {
+        "level": "learning",
+        "toolTip": "Just started playing with it for personal projects"
+      },
+      "mongodb": {
+        "level": "learning",
+        "toolTip": "Did some intro courses on it"
+      }
+    },
+    "other skills": {
+      "R": {
+        "level": "proficient+",
+        "toolTip": "3-years experience using R to perform in-depth statistical analaysis on various datasets."
+      },
+      "marketing": {
+        "level": "proficient+",
+        "toolTip": "10-years experience with traditional and digital marketing"
+      },
+      "entrepreneurship": {
+        "level": "proficient+",
+        "toolTip": "8+ years building companies from scratch -- 3 successful liquidity events"
+      },
+      "linux": {
+        "level": "competent",
+        "toolTip": "a long time user of linux, including web server builds"
+      }
+    }
+  },
+  "contact": {
+    "sectionTitle": "get in touch",
+    "email": "charlie@xagax.com",
+    "github": "https://github.com/deduced",
+    "linkedin": "https://www.linkedin.com/in/carlos-astrada-3463223/",
+    "twitter": "https://twitter.com/therealdeduced"
+  }
+}
