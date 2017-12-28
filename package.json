@@ -17,19 +17,19 @@
   },
   "homepage": "https://github.com/deduced/bov-personal-portfolio#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.22.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-bump": "^2.7.0",
-    "gulp-clean-css": "^3.7.0",
+    "gulp-bump": "^2.9.0",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
-    "gulp-git": "^2.4.2",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-git": "^2.5.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-jshint": "^2.0.4",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "jshint": "^2.9.5",
-    "run-sequence": "^2.1.0"
+    "run-sequence": "^2.2.0"
   },
   "dependencies": {
     "jquery": "^3.2.1"
