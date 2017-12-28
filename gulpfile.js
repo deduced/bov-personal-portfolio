@@ -33,12 +33,12 @@ gulp.task('clean:public', function() {
 
 
 gulp.task('concatAndMinifyJs', function() {
-  gulp.src(['src/assets/js/jquery.js',
+  gulp.src([ 'src/assets/js/jquery.js',
             'src/assets/js/jquery.easing.js',
             'src/assets/js/scrolling-nav.js',
             'src/assets/js/back-to-top.js',
             'src/assets/js/overlay.js',
-            'src/assets/js/slider.js'])
+            'src/assets/js/slider.js' ])
       .pipe(concat('main.min.js'))
       .pipe(uglify())
       .on('error', handleError)
@@ -76,10 +76,10 @@ gulp.task('imageMin', function() {
 
 //Lint javascript
 gulp.task('lintJs', function() {
-  gulp.src(['src/assets/js/scrolling-nav.js',
+  gulp.src([ 'src/assets/js/scrolling-nav.js',
             'src/assets/js/back-to-top.js',
             'src/assets/js/overlay.js',
-            'src/assets/js/slider.js'])
+            'src/assets/js/slider.js' ])
       .pipe(jshint())
       .pipe(jshint.reporter('default'))
       .pipe(jshint.reporter('fail'));
@@ -105,26 +105,26 @@ gulp.task('watchIndex', function() {
 
 //*********Git Tasks************//
 //git add all files in source
-gulp.task('add', function(){
-  return gulp.src('.')
+gulp.task('add', function() {
+  return gulp.src ('.')
     .pipe(git.add());
 });
 
 //git commit
-gulp.task('commit', function(){
+gulp.task('commit', function() {
   return gulp.src('.')
     .pipe(git.commit(gitMessage));
 });
 
 //git push
-gulp.task('push', function(){
+gulp.task('push', function() {
   git.push('origin', 'master', function (err) {
     if (err) throw err;
   });
 });
 
 //********* Build,  Deploy, and Watch Tasks ************//
-gulp.task('build', ['lintJs', 'imageMin', 'sass', 'concatAndMinifyJs']);
+gulp.task('build', [ 'lintJs', 'imageMin', 'sass', 'concatAndMinifyJs' ]);
 
 gulp.task('deploy', function(callback) {
   runSequence('build', 'bumpPackage', 'add', 'commit', 'push', callback);
@@ -138,13 +138,13 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function() {
-  gulp.watch('src/stylesheets/**/*.scss', ['sass']);
+gulp.task('watch', [ 'browserSync', 'sass' ], function() {
+  gulp.watch('src/stylesheets/**/*.scss', [ 'sass' ]);
 
-  gulp.watch('src/assets/js/*.js', ['lintJs', 'concatAndMinifyJs']);
+  gulp.watch('src/assets/js/*.js', [ 'lintJs', 'concatAndMinifyJs' ]);
 
-  gulp.watch('./index.html', ['watchIndex']);
+  gulp.watch('./index.html', [ 'watchIndex' ]);
 
-  gulp.watch('src/assets/images/*.+(png|jpg|jpeg)', ['imageMin']);
+  gulp.watch('src/assets/images/*.+(png|jpg|jpeg)', [ 'imageMin' ]);
 
 });
