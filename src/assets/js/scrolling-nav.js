@@ -1,3 +1,5 @@
+//@TODO: This is not yet working in Safari. Test and fix.
+
 function scrollTo(e) {
     var distanceToTop = function (el) {
             try {
