@@ -21,6 +21,7 @@
     "del": "^3.0.0",
     "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-crockford": "^2.0.0",
     "eslint-plugin-import": "^2.8.0",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.9.0",
